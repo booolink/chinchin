@@ -151,8 +151,10 @@ margin-bottom: 8px;
     width: 10px;
     font-family:"微軟正黑體" ;
     font-size: 40pt;
-    margin-top: 30px;
+    margin-top: 80px;
+    margin-left: 20px;
     float: left; 
+    color: rgba(51, 51, 51, 0.534);
 }
 .title{
     font-family:"微軟正黑體" ;
@@ -161,6 +163,7 @@ margin-bottom: 8px;
     margin-top: 10px;
     margin-left:3px;
     border-radius:2px;
+    border-bottom:2px solid rgba(49, 48, 48, 0.651); 
     /* overflow:hidden; */
     /* text-overflow: clip; */
     /* white-space:nowrap; */
@@ -168,8 +171,8 @@ margin-bottom: 8px;
 }
 .link_all{
     width: 100px;
-    margin-left: 80px;
-    margin-top: 48px;
+    margin-left: 50px;
+    margin-top: 28px;
 }
 .link{
     width: 120px;
@@ -737,7 +740,7 @@ margin-bottom: 8px;
                ,-2px 0px 2px 8px rgba(0, 0, 0, 0.63); */
 }
 .swiper-slide{
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 .int_img{
     text-indent:5px;
@@ -749,11 +752,14 @@ margin-bottom: 8px;
     background-size: cover;
 }
 .int_txt{
-    float: center;
+    width: calc(100% - 108px - 38px);
+    float: right;
+    font-size: 17px;
     font-family: '微軟正黑體';
     font-weight: 900;
-    text-align: center; 
-    text-shadow:  0.5px 0.5px rgb(255, 255, 255), -1px -1px rgba(236, 87, 87, 0.658);
+    text-align: center;
+    color:white;
+    text-shadow:  1.5px 1.5px 3px rgb(14, 201, 226);
 }
 
 /*--------------------以上 電影介紹 總體設定-----------------------------*/
@@ -937,4 +943,136 @@ margin-bottom: 8px;
 #int_img_j8{
     background-image: url(../img/Annabelle.jpg);
 }
+/* ------------------------------------------------------------- */
+/* ---------------chin_5---------- 關於親親 -------------------------- */
+/* ------------------------------------------------------------- */
 
+.chin_5{
+    width: 100%;
+    height: 637px;
+    margin: auto;
+    background-color: rgba(230, 230, 230, 0.199);  
+}
+.chin5_box1{
+    width: 800px;
+    height: 970px;
+    margin: auto;
+    padding-top:50px; 
+    position: relative;
+}
+.chin5_right{
+    width: 30px;
+    font-family:"微軟正黑體" ;
+    font-size: 35pt;
+    font-weight: 900;
+    position: absolute;
+    right: 100px;
+    color: rgb(185, 182, 182);
+    text-shadow: 2px 2px rgb(3, 3, 3);
+}
+
+
+.chin5_txtbox1{
+    width: 600px;
+    height: 302px;
+    border-radius:5px; 
+    background-color: rgb(255, 29, 37,0.58);
+} 
+.chin5_txt{
+    font-family:"微軟正黑體" ;
+    font-size: 18pt;
+    text-align: left;
+    text-indent:80px;
+    color: rgb(199, 199, 199);
+    text-shadow:2px 2px 1px #333;
+    line-height: 33px;
+}
+.chin5_txtbox{
+    width: 580px;
+    height: 370px;
+    border-radius:5px; 
+    background-color: rgba(153, 153, 153, 0.822);
+    position: absolute;
+    right: 130px;
+    top: 250px;    
+}
+.chin5_title{
+    width: 80px;
+    background-color: rgba(238, 84, 84, 0.568);
+    border-radius:5px; 
+    font-family:"微軟正黑體" ;
+    font-size: 18pt;
+    color: rgb(51, 51, 51);
+    text-shadow:1px 1px rgb(95, 95, 95);
+    margin-bottom: 5px;
+}
+.chin5_text{
+    border-top: 1px solid rgba(80, 77, 77, 0.815); 
+    font-family:"微軟正黑體" ;
+    font-size: 12pt;
+    text-align: left;
+    color: rgb(243, 240, 240);
+    text-shadow:2px 2px 2px #333;
+    line-height: 23px;
+}
+/* ------------------------------------------------------------- */
+/* ------------------------- 交通指南 -------------------------- */
+/* ------------------------------------------------------------- */
+.chin_6{
+    width: 1140px;
+    height: 970px;
+    margin: auto;
+    clear: both;
+    position: relative;
+    /* background-color: rgb(0, 4, 255); */
+}
+.chin6_left{
+    width: 300px;
+    font-weight: 900;
+    font-family:"微軟正黑體" ;
+    text-align: center;
+    font-size: 40pt;
+    float: left;
+    margin-top: 50px;
+    margin-left:205px;    
+    text-shadow: -1px -1px white, 1px 1px #666;
+}
+.googlemap {
+    width: 350px;
+    height: 370px;
+    background-color: rgba(230, 136, 136, 0.781);
+    position: absolute;
+    left: 205px;
+    top: 205px;
+    border-radius:3px; 
+    box-shadow: 3px 3px 3px 3px rgb(0, 0, 0);
+}
+.googlemap_txt,.bus{
+    width: 200px;
+    height: 30px;
+    font-family: '微軟正黑體';
+    font-size: 16pt;
+    font-weight:900; 
+    display:inline-block;
+    text-align: center;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.644);
+    margin: 8px 0px 8px 8px;
+}
+.googlemap_link{
+    padding: 10px 0px 0px 10px;
+}
+.chin6_bus{
+    width: 350px;
+    height: 370px;
+    background-color:  rgba(230, 136, 136, 0.788);
+    position: absolute;
+    right: 155px;
+    top: 50px;
+    border-radius:3px; 
+    box-shadow: 3px 3px 3px 3px rgb(0, 0, 0);
+}
+.chin6_bus_img{
+    padding: 5px 0px 0px 5px;
+    background-size:contain;
+}
