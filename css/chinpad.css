@@ -12,10 +12,12 @@
     position: relative;
     width: 414px;
     display: block;
+    margin: auto;
   }
  
   .m_chin0 {
     width:90%;
+    margin: auto;
   }
   .m_ticket {
     width: 100%;
@@ -27,7 +29,7 @@
     margin-left:100px;
 }
   .m_chin1 {
-    width: 90%;
+    width: 100%;
     margin: auto;
     height: 50px;
     padding-top: 3px;
@@ -43,7 +45,7 @@
 
   }
   .chinLOGO{
-    width: 80%;
+    width: calc(100% - 45px);
     margin: auto;
     text-align: center;
     font-family: '微軟正黑體';
