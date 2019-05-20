@@ -33,6 +33,21 @@ a{
   margin: auto;
   position: relative;
 }
+.totop{
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    font-family: '微軟正黑體';
+    font-size: 30px;
+    border-radius:5px; 
+    background-color: red;
+    color:white;
+    position: fixed;
+    top: 550px;
+    right: 50px;
+    z-index: 999;
+}
+/**-**********標題含票價******chin_1*************-*/
 .vip {
   width: 540px;
   height: 110px;
@@ -47,7 +62,6 @@ a{
   width: calc(100% - 205px);
   background-color: rgba(21, 68, 255, 0.253);
   border-radius: 5px;
-  height: 498px;
   position: absolute;
   top: 120px;
   left: 105px;

@@ -14,6 +14,22 @@
 <body>
 
     <div class="chinchin">
+        <div class="totop movie_none"><a href="#">Top</a></div>
+
+        <script>
+         var totop = document.querySelector('.totop')
+
+        window.addEventListener('scroll',scroll)
+
+        function scroll(){
+           if(document.documentElement.scrollTop >= 700 ){
+            totop.classList.remove('movie_none')
+           }else{
+            totop.classList.add('movie_none')
+           }
+        }
+
+        </script>
          <!-- 標題含票價 chin_1----------->
         <nav class='chin_1'>
             <div class="vip"></div>
@@ -72,6 +88,7 @@
 
             </div>
         </nav>
+        
         <!-- 浮動menu ----------->
         <div class="menu">
             <p class="title">親親戲院</p>
