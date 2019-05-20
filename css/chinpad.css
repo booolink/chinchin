@@ -8,21 +8,24 @@
     display: none;
   }
 
-  .m_chinchin {
+  .m_chinchin{
     position: relative;
     width: 414px;
     display: block;
   }
  
   .m_chin0 {
-    width:95%;
+    width:90%;
   }
-  .ticket {
-    width: 85%;
+  .m_ticket {
+    width: 100%;
     margin: auto;
     position: static;
     background-size: contain; 
   }
+  #ticket_li3_txt2{/*第三部分第二行左推*/
+    margin-left:100px;
+}
   .m_chin1 {
     width: 90%;
     height: 50px;
