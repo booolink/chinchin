@@ -28,6 +28,7 @@
 }
   .m_chin1 {
     width: 90%;
+    margin: auto;
     height: 50px;
     padding-top: 3px;
     background-color: rgba(0, 0, 0, 0.267);
