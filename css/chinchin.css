@@ -1,0 +1,940 @@
+* {
+  box-sizing: border-box;
+  outline: 1px solid red;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/star.jpg');
+  background-attachment: fixed;
+}
+ul,li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+}
+a{
+    text-decoration: none;
+}
+/**-**********chinchin*******************-*/
+.chinchin {
+  width: 1140px;
+  margin: auto;
+  /* background-color: aqua; */
+}
+.chin_1 {
+  width: 800px;
+  height: 750px;
+  margin: auto;
+  position: relative;
+}
+.vip {
+  width: 540px;
+  height: 110px;
+  border-radius: 5px;
+  background-image: url(../img/baneer.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: right;
+}
+.ticket {
+  font-family: '微軟正黑體';
+  width: calc(100% - 205px);
+  background-color: rgba(21, 68, 255, 0.253);
+  border-radius: 5px;
+  height: 498px;
+  position: absolute;
+  top: 120px;
+  left: 105px;
+}
+.ticket_h1 {
+  /*電影票價*/
+  width: 95%;
+  color: white;
+  text-align: center;
+  margin: 15px auto;
+  border-bottom: 1.8px solid #666;
+}
+.ticket_ul1 {
+  /*電影票價表單*/
+  width: 95%;
+  margin: auto;
+}
+.h2d {
+    /*2D個別設定*/
+    margin-left: 80px;
+    color: rgb(2, 173, 2);
+  }
+  .h3d {
+    /*3D個別設定*/
+    margin-left: 30px;
+    color: rgb(231, 161, 8);
+  }
+.ticket_li {
+  /*全部li*/
+  width: 100%;
+  border-bottom: 1.2px solid #666;
+  display: flex;
+  margin: auto;
+}
+.diu {
+  /*2d+3d文字設定*/
+  font-size: 26px;
+  font-weight: 900;
+}
+.diu_li {
+  /*票價項目*/
+  width: 80px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ede935;
+  
+}
+.diu_li_m {
+  /*票價*/
+  width: 70px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+.ticket_li_txt{
+width: calc(100% - 80px - 70px - 20px);
+color: aliceblue;
+font-size: 14px;
+}
+.ticket_ul2,
+.ticket_ul3,
+.ticket_ul4{
+    padding-left: 20px;
+    width: 95%;
+    margin: auto;
+    border-bottom: 1.2px solid #666;
+}
+.ticket_li2_txt{/*第二部分內文*/
+ color: aliceblue;
+font-size: 14px;
+margin-bottom: 8px;
+}
+.ticket_li2_vip{/*會員卡標題*/
+    font-size: 18px;
+    font-style: unset;
+    font-weight: bold;
+    color: #ede935;
+}
+.ticket_li3_txt{/*第三部分內文*/
+    color: aliceblue;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+#ticket_li3_txt2{/*第三部分第二行左推*/
+    margin-left:300px;
+}
+.ticket_li4_txt{/*第四部分內文*/
+    color: aliceblue;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+/* --------------------menu--------------------------- */
+.menu{
+    border-radius:0.4rem;
+    background-color: rgba(209, 250, 133, 0.192);
+    position: fixed;
+    top: 170px;
+    z-index: 999;
+}
+.title_left{
+    width: 10px;
+    font-family:"微軟正黑體" ;
+    font-size: 40pt;
+    margin-top: 30px;
+    float: left; 
+}
+.title{
+    font-family:"微軟正黑體" ;
+    font-size: 28pt;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    margin-left:3px;
+    border-radius:2px;
+    /* overflow:hidden; */
+    /* text-overflow: clip; */
+    /* white-space:nowrap; */
+    /* display:  block; */
+}
+.link_all{
+    width: 100px;
+    margin-left: 80px;
+    margin-top: 48px;
+}
+.link{
+    width: 120px;
+    height: 30px;
+    font-weight: 900;
+    text-align: center;
+    display: block;
+    margin: 8px 10px 28px -5px;
+    position: relative;
+}
+.acolor{
+    font-family: "微軟正黑體" ;
+    color:rgba(247, 112, 63, 0.37);
+    font-size: 14pt;
+    text-shadow: 1px 1px #333;
+    display: inline-block;
+}
+.bg{   
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    z-index: -1;
+    border-radius: 2px; 
+}
+.link:hover .bg{
+    animation: bg_ani 300ms;
+    animation-fill-mode: forwards;
+}
+.link:hover a{
+    font-size: 18pt;
+}
+.link:hover .acolor{
+    margin-left: 20px;
+    margin-top: -5px;
+}
+@keyframes bg_ani{
+    0%{
+        top: -4px;
+        width: 0px;
+        background-color: white;
+    }
+    100%{
+        top: -4px;
+        width: 110px;
+        background-color: white;
+    }
+}
+@keyframes title_ani{
+    from{
+        width: 90%;
+    }
+    to{
+        width: 0%;
+    }
+}
+/* ------------------------------------------------------------- */
+/* ------------------------- 場次專區 -------------------------- */
+/* ------------------------------------------------------------- */
+  .chin2_topbox{
+    width: 700px;
+    margin: auto;
+    display: flex;
+}
+.chin2_text{
+    width: 300px;
+    height: 30px;
+    font-family: '微軟正黑體';
+    font-size: 16pt;
+    font-weight:900; 
+    text-align: center;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.644);
+    margin: 8px 0px 8px 8px;
+}
+.chin_2{
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between; 
+  }
+/* -----------------------電影內容設定-------------------------------------- */
+.movie{
+    width: calc(100% / 4 - 7px);
+    height: 242.2px;
+    background-color: rgba(32, 128, 128, 0.5);
+    border: 3px ridge rgba(71, 71, 71, 0.842);
+    border-radius: 4px;
+    margin: 0px 7px 5px 0px;
+    float: right;  
+}
+.movie_all1{
+    width: 100%;
+}
+.movie_all2{
+    width: 100%;
+}
+.movie_text{
+    width: 100%;
+    height: 37.5px;
+    background-color: rgba(24, 23, 23, 0.637);
+    border-radius: 1.5px;
+}
+.text{
+    width: calc(100% - 24px - 15px);
+    float: left;
+    text-indent:2px;
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+.Grading_all{
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    float: left;
+    margin: 5px 10px 5px 5px;
+}
+.movebox_1{
+    width: 100%;
+    height: 160px;
+}
+.movie_img{
+    float: left;
+}
+.img_all{
+    width: 108px;
+    height: 160px;
+    background-size: cover;
+}
+.movie_time{
+    font-family: '微軟正黑體';
+    font-size: 10pt;
+    font-weight: 900;
+    color: white;
+    line-height: 12pt;
+    text-align: center;
+    margin: auto;
+}
+
+.movebox_2{
+    width: 100%;
+    height: 40px;
+}
+.leftdown{
+    float: left;
+}
+.movie_living{
+    width: 108px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.movie_int{
+    width: 108px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.rightdown{
+    float: center;
+}
+
+.movie_time2{
+    font-family: '微軟正黑體';
+    font-size: 9pt;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+.movie_block{
+    display: block;
+}
+.movie_none{
+    display: none;
+}
+.movietxtcolor{
+    background-color: #f54b17;
+}
+/*------------------以上總體設定------------------------------------------ */
+/*------------------以下個別設定------------------------------------------ */
+
+#movie_test1-1{
+    font-size: 9pt;    
+}
+.movie_int{
+    background-image: url(../img/mg001.jpg);
+}
+/*-- 分級ico --*/
+.Grading1-1{
+    background-image: url(../img/6plus.png);
+}
+/*-- 電影海報 --*/
+.img1-1{
+    background-image: url(../img/bgc1.jpg);    
+}
+/*-- 電影廳 --*/
+.movie_living1-1{
+    background-image: url(../img/mr01.jpg);
+}
+
+/*-- 分級ico --*/
+.Grading2-1{
+    background-image: url(../img/6plus.png);
+}
+/*-- 電影海報 --*/
+.img2-1{
+    background-image: url(../img/bgc1.jpg);    
+}
+/*-- 電影廳 --*/
+.movie_living2-1{
+    background-image: url(../img/mr01.jpg);
+}
+
+/************二 二 二 二***************/
+#movie_test2{
+    font-size: 9px;
+}
+/*-- 分級ico --*/
+.Grading2{
+    background-image: url(../img/6plus.png);
+}
+/*-- 電影海報 --*/
+.img2{
+    background-image: url(../img/bgc1.jpg);    
+}
+/*-- 電影廳 --*/
+.movie_living2{
+    background-image: url(../img/mr02.jpg);
+}
+/*******/
+/*-- 分級ico --*/
+.Grading2-2{
+    background-image: url(../img/0plus.png);
+}
+/*-- 電影海報 --*/
+.img2-2{
+    background-image: url(../img/Pikachu.jpg);    
+}
+/*-- 電影廳 --*/
+.movie_living2-2{
+    background-image: url(../img/mr02.jpg);
+}
+/************三 三 三 三***************/
+
+#movie_test3{
+    font-size: 7pt;
+}
+.Grading3{
+    background-image: url(../img/15plus.png);
+}
+.img3{
+    background-image: url(../img/Hellboy.jpg);    
+}
+.movie_living3{
+    background-image: url(../img/mr03.jpg);
+}
+
+/*******/
+.Grading2-3{
+    background-image: url(../img/0plus.png);
+}
+.img2-3{
+    background-image: url(../img/Pikachu.jpg);    
+}
+.movie_living2-3{
+    background-image: url(../img/mr03.jpg);
+}
+/*************四 四 四 四**************/
+#movie_test4{
+    font-size: 9pt;    
+}
+.Grading4{
+    background-image: url(../img/6plus.png);
+}
+.img4{
+    background-image: url(../img/bgc1.jpg);    
+}
+.movie_living4{
+    background-image: url(../img/mr03.jpg);
+}
+/******/
+.Grading2-4{
+    background-image: url(../img/6plus.png);
+}
+.img2-4{
+    background-image: url(../img/bgc1.jpg);    
+}
+.movie_living2-4{
+    background-image: url(../img/mr05.jpg);
+}
+/*************五 五 五 五**************/
+#movie_test5{
+    font-size: 9pt;    
+}
+.Grading5{
+    background-image: url(../img/6plus.png);
+}
+.img5{
+    background-image: url(../img/bgc1.jpg);    
+}
+.movie_living5{
+    background-image: url(../img/mr05.jpg);
+}
+/******/
+.Grading2-5{
+    background-image: url(../img/0plus.png);
+}
+.img2-5{
+    background-image: url(../img/Missing\ Link.jpg);    
+}
+.movie_living2-5{
+    background-image: url(../img/mr06.jpg);
+}
+/************六 六 六 六***************/
+#movie_test6{
+    font-size: 9pt;
+}
+.Grading6{
+    background-image: url(../img/15plus.png);
+}
+.img6{
+    background-image: url(../img/Pet\ Sematary.JPG);    
+}
+.movie_living6{
+    background-image: url(../img/mr06.jpg);
+}
+/******/
+.Grading2-6{
+    background-image: url(../img/6plus.png);
+}
+.img2-6{
+    background-image: url(../img/bgc1.jpg);    
+}
+.movie_living2-6{
+    background-image: url(../img/mr06.jpg);
+}
+/************七 七 七 七***************/
+#movie_test7{
+    font-size: 9pt;    
+}
+.Grading7{
+    background-image: url(../img/6plus.png);
+}
+.img7{
+    background-image: url(../img/bgc1.jpg);    
+}
+.movie_living7{
+    background-image: url(../img/mr06.jpg);
+}
+/******/
+.Grading2-7{
+    background-image: url(../img/6plus.png);
+}
+.img2-7{
+    background-image: url(../img/Hustle.JPG);    
+}
+.movie_living2-7{
+    background-image: url(../img/mr07.jpg);
+}
+/************八 八 八 八***************/
+#movie_test8{
+
+    font-size: 9pt;    
+}
+.Grading8{
+    background-image: url(../img/15plus.png);
+}
+.img8{
+    background-image: url(../img/Llorona.jpg);    
+}
+.movie_living8{
+    background-image: url(../img/mr07.jpg);
+}
+/******/
+.Grading2-8{
+    background-image: url(../img/6plus.png);
+}
+.img2-8{
+    background-image: url(../img/Llorona.jpg);    
+}
+.movie_living2-8{
+    background-image: url(../img/mr08.jpg);
+}
+/************九 九 九 九**************/
+#movie_test9{
+
+    font-size: 9pt;
+}
+.Grading9{
+    background-image: url(../img/15plus.png);
+}
+.img9{
+    background-image: url(../img/Pet\ Sematary.JPG);    
+}
+.movie_living9{
+    background-image: url(../img/mr07.jpg);
+}
+/******/
+.Grading2-9{
+    background-image: url(../img/0plus.png);
+}
+.img2-9{
+    background-image: url(../img/Missing\ Link.jpg);    
+}
+.movie_living2-9{
+    background-image: url(../img/mr08.jpg);
+}
+/************十 十 十 十**************/
+#movie_test10{
+
+    font-size: 9pt;    
+}
+.Grading10{
+    background-image: url(../img/0plus.png);
+}
+.img10{
+    background-image: url(../img/Missing\ Link.jpg);    
+}
+.movie_living10{
+    background-image: url(../img/mr08.jpg);
+}
+/******/
+.Grading2-10{
+    background-image: url(../img/15plus.png);
+}
+.img2-10{
+    background-image: url(../img/Pet\ Sematary.JPG);    
+}
+.movie_living2-10{
+    background-image: url(../img/mr08.jpg);
+}
+/************拾一 拾一**************/
+#movie_test11{
+
+    font-size: 9pt;    
+}
+.Grading11{
+    background-image: url(../img/0plus.png);
+}
+.img11{
+    background-image: url(../img/Missing\ Link.jpg);    
+}
+.movie_living11{
+    background-image: url(../img/mr08.jpg);
+}
+/******/
+.Grading2-11{
+    background-image: url(../img/6plus.png);
+}
+.img2-11{
+    background-image: url(../img/bgc1.jpg);    
+}
+.movie_living2-11{
+    background-image: url(../img/mr05.jpg);
+}
+/************拾二 拾二**************/
+ /* #movie_test12{
+    font-family: '微軟正黑體';
+    font-size: 9pt;    
+}
+.Grading12{
+    background-image: url(../img/6plus.jpg);
+}
+.img12{
+    background-image: url(../img/bgc1.jpg);    
+}
+.movie_living12{
+    background-image: url(../img/mr01.jpg);
+} */
+
+/******/
+
+/*
+.Grading2-12{
+    background-image: url(../img/6plus.png);
+}
+.img2-12{
+    background-image: url(../img/bgc1.jpg);    
+}
+.movie_living2-12{
+    background-image: url(../img/mr05.jpg);
+} 
+*/
+/***************************************/
+/* ------------------------------------------------------------- */
+/* ------------------------- 活動專區 -------------------------- */
+/* ------------------------------------------------------------- */
+.chin_3{
+    width: 800px;
+    height: 1160px;
+    margin: auto;
+    clear: both;
+    position: relative;
+}
+.chin3_txt{
+    width: 30px;
+    font-family:"微軟正黑體" ;
+    font-size: 40pt;
+    margin-right: 50px;
+    text-shadow: -2px -2px 4px white, 1px 1px 2px rgb(163, 161, 161);
+    position: absolute;
+    z-index: 5;
+    right: -30px;
+    top: 20px;
+}
+.chin3_bg{
+    width: 100%;
+    height: 250px;
+    float: right;
+    margin:auto;
+    border-radius: 12px;
+    background-color: #8c2c4475;
+}
+.chin3_ad{
+    width: 90%;
+    height: 960px;
+    background-image: url(../img/visacard-05.jpg);
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 3;
+    top: 50px;
+    right: 60px;
+    opacity: 0.8;
+}
+/* ------------------------------------------------------------- */
+/* ------------------------- 電影介紹 -------------------------- */
+/* ------------------------------------------------------------- */
+.chin_4{
+    width: 800px;
+    height: 970px;
+    margin: auto;
+    /* background-color: rgb(0, 4, 255); */
+}
+.chin4_left{
+    width: 200px;
+    font-family:"微軟正黑體" ;
+    font-size: 30pt;
+     margin: auto;  
+    text-shadow: -2px -2px 10px white, 1px 1px #333;
+}
+.introduction{
+    height: 250px;
+    margin-left: 25px;
+    box-shadow: 5px 3px 8px 5px black;
+    margin-bottom: 30px;
+}
+.month{
+    width: 90px;
+    height: 30px;
+    font-family: '微軟正黑體';
+    font-size: 16pt;
+    font-weight:900; 
+    display:inline-block;
+    text-align: center;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.644);
+    margin: 8px 0px 8px 8px;
+    /* box-shadow: 2px 0px 2px 8px rgba(0, 0, 0, 0.63)
+               ,-2px 0px 2px 8px rgba(0, 0, 0, 0.63); */
+}
+.swiper-slide{
+  margin-bottom: 70px;
+}
+.int_img{
+    text-indent:5px;
+    font-size: 12pt;
+    float: left;
+    width: 108px;
+    height: 160px;
+    margin-left: 38px;
+    background-size: cover;
+}
+.int_txt{
+    float: center;
+    font-family: '微軟正黑體';
+    font-weight: 900;
+    text-align: center; 
+    text-shadow:  0.5px 0.5px rgb(255, 255, 255), -1px -1px rgba(236, 87, 87, 0.658);
+}
+
+/*--------------------以上 電影介紹 總體設定-----------------------------*/
+/* #int_txt1{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_a1{
+    background-image: url(../img/Hellboy.jpg);
+}
+/************二 二 二 二***************/
+/* #int_txt2{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_a2{
+    background-image: url(../img/Pet\ Sematary.JPG);
+}
+/************三 三 三 三***************/
+/* #int_txt3{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_a3{
+    background-image: url(../img/Llorona.jpg);
+}
+/************四 四 四 四***************/
+/* #int_txt4{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_a4{
+    background-image: url(../img/bgc1.jpg);
+}
+/************月 月 月 月***************/
+/************五 五 五 五***************/
+/************月 月 月 月***************/
+
+/* #int_txtm1{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_m1{
+    background-image: url(../img/Missing\ Link.jpg);
+}
+/************二 二 二 二***************/
+/* #int_txtm2{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_m2{
+    background-image: url(../img/Hustle.JPG);
+}
+/************三 三 三 三***************/
+/* #int_txtm3{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_m3{
+    background-image: url(../img/Pikachu.jpg);
+}
+/************四 四 四 四***************/
+/* #int_txtm4{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_m4{
+    background-image: url(../img/Parabellum.jpg);
+}
+/************五 五 五 五***************/
+/* #int_txtm5{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_m5{
+    background-image: url(../img/Dog.jpg);
+}
+/************六 六 六 六***************/
+/* #int_txtm6{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_m6{
+    background-image: url(../img/Bad\ Boys\ Symphony.jpg);
+}
+/************七 七 七 七***************/
+/* #int_txtm7{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_m7{
+    background-image: url(../img/UglyDolls.jpg);
+}
+/************八 八 八 八***************/
+/* #int_txtm8{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_m8{
+    background-image: url(../img/Aladdin.jpg);
+}
+/************九 九 九 九***************/
+/* #int_txtm9{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_m9{
+    background-image: url(../img/City\ Hunter.jpg);
+}
+/************十 十 十 十***************/
+/* #int_txtm10{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_m10{
+    background-image: url(../img/Godzilla2.jpg);
+}
+/************月 月 月 月***************/
+/************六 六 六 六***************/
+/************月 月 月 月***************/
+/* #int_txtj1{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_j1{
+    background-image: url(../img/Dark\ Phoenix.jpg);
+}
+/************二 二 二 二***************/
+/* #int_txtj2{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_j2{
+    background-image: url(../img/Pets\ 2.JPG);
+}
+/************三 三 三 三***************/
+/* #int_txtj3{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_j3{
+    background-image: url(../img/International.jpg);
+}
+/************四 四 四 四***************/
+/* #int_txtj4{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_j4{
+    background-image: url(../img/Rocketman.JPG);
+}
+/************五 五 五 五***************/
+/* #int_txtj5{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_j5{
+    background-image: url(../img/Dog.jpg);
+}
+/************六 六 六 六***************/
+/* #int_txtj6{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_j6{
+    background-image: url(../img/Anna.jpg);
+}
+/************七 七 七 七***************/
+/* #int_txtj7{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_j7{
+    background-image: url(../img/Yesterday.jpg);
+}
+/************八 八 八 八***************/
+/* #int_txtj8{
+    text-indent:5px;
+    font-size: 12pt;
+} */
+#int_img_j8{
+    background-image: url(../img/Annabelle.jpg);
+}
+
