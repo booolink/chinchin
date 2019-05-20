@@ -21,6 +21,12 @@ p {
 a{
     text-decoration: none;
 }
+.chinchin {
+    display: block;
+  }
+.m_chinchin {
+    display: none;
+  }
 /**-**********chinchin*******************-*/
 .chinchin {
   width: 1140px;
@@ -45,6 +51,33 @@ a{
     position: fixed;
     top: 550px;
     right: 50px;
+    z-index: 999;
+}
+/* --------------------facebook--------------------------- */
+.facebook{
+    width: 150px;
+    height: 70px;
+    border-radius:0.4rem;
+    background-image: url(../img/Facebook_Logo.png);
+    background-position: center;
+    background-size: contain;
+    position: fixed;
+    right: 160px;
+    top: 487px;
+    z-index: 999;
+}
+/* --------------------halalogo--------------------------- */
+.halalogo{
+    width: 150px;
+    height: 70px;
+    border-radius:0.4rem;
+    background-image: url(../img/halalogo-04.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    right: 160px;
+    top: 587px;
     z-index: 999;
 }
 /**-**********標題含票價******chin_1*************-*/
