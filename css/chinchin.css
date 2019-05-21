@@ -418,7 +418,7 @@ a{
 /*------------------以下個別設定------------------------------------------ */
 
 #movie_test1-1{
-    font-size: 9pt;    
+    font-size:9pt;    
 }
 .movie_int{
     background-image: url(../img/mg001.jpg);
@@ -481,7 +481,7 @@ a{
 /************三 三 三 三***************/
 
 #movie_test3{
-    font-size: 7pt;
+    font-size: 8pt;
 }
 .Grading3{
     background-image: url(../img/15plus.png);
