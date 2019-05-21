@@ -66,6 +66,25 @@
     top: 90px;
     border-radius:5px;
   }
+  .chin5_txtbox1{
+    width: 600px;
+    height: 302px;
+    margin-left: 75px;
+    border-radius:5px; 
+    background-color: rgb(255, 29, 37,0.58);
+} 
+  .googlemap {
+  
+    left: 0px;
+    top: 85px;
+ 
+}
+.chin6_bus{
+
+  right: 210px;
+  top: 490px;
+
+}
 }
 @media screen and (max-width: 768px) {
   /*-- 第二部分 電影內容 chin_2-----------*/
