@@ -7,6 +7,8 @@ body {
   padding: 0;
   background-image: url('../img/star.jpg');
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 ul,li {
   margin: 0;
@@ -786,7 +788,7 @@ a{
     text-shadow: -2px -2px 10px white, 1px 1px #333;
 }
 .introduction{
-    height: 250px;
+    height: 230px;
     margin-left: 25px;
     box-shadow: 5px 3px 8px 5px black;
     margin-bottom: 30px;
@@ -813,14 +815,14 @@ a{
     font-size: 12pt;
     float: left;
     width: 108px;
-    height: 160px;
+    height: 140px;
     margin-left: 38px;
     background-size: cover;
 }
 .int_txt{
     width: calc(100% - 108px - 38px);
     float: right;
-    font-size: 17px;
+    font-size: 14px;
     font-family: '微軟正黑體';
     font-weight: 900;
     text-align: center;
