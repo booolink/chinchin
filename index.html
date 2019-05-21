@@ -17,41 +17,12 @@
     <div class="chinchin">
         <div class="totop movie_none"><a href="#">Top</a></div>
 
-
         <a class="facebook"
             href="https://www.facebook.com/Chin-Chin%E8%A6%AA%E8%A6%AA%E6%88%B2%E9%99%A2-%E5%8F%B0%E4%B8%AD%E4%BA%BA%E6%B0%A3%E9%9B%BB%E5%BD%B1%E9%99%A2-319048852447/?ref=hl"></a>
 
         <a class="halalogo" href="http://www.halabakery.com.tw/"></a>
-
-        <script>
-            var totop = document.querySelector('.totop')
-            var facebook = document.querySelector('.facebook')
-            var halalogo = document.querySelector('.halalogo')
-
-            window.addEventListener('scroll', scroll1)
-            window.addEventListener('scroll', scroll2)
-
-            function scroll1() {
-                if (document.documentElement.scrollTop >= 700) {
-                    totop.classList.remove('movie_none')
-                } else {
-                    totop.classList.add('movie_none')
-                }
-            }
-            function scroll2() {
-                if (document.documentElement.scrollTop >= 3500) {
-                    facebook.classList.add('movie_none')
-                    halalogo.classList.add('movie_none')
-                } else {
-                    facebook.classList.remove('movie_none')
-                    halalogo.classList.remove('movie_none')
-                }
-            }
-
-        </script>
-
         <!-- 標題含票價 chin_1----------->
-        <nav class='chin_1'>
+        <nav class='chin_1 close'>
             <div class="vip"></div>
             <div class="ticket">
                 <h1 class="ticket_h1">電影票價</h1>
@@ -102,9 +73,7 @@
                     </li>
                 </ul>
             </div>
-    
         </nav>
-
         <!-- 浮動menu ----------->
         <div class="menu">
             <p class="title1">親親戲院</p>
@@ -130,23 +99,8 @@
                 </li>
             </ul>
         </div>
-        <script>
-        var title1 = document.querySelector('.title2')
-        var link_all =  document.querySelector('.link_all')
-        var link =  document.querySelector('.link')
-
-        title1.addEventListener('click',chinopenHandler)
-
-        function chinopenHandler(){
-        if(link_all.style.display == 'none'){
-            link_all.style.display ='block'
-        }else{
-            link_all.style.display = 'none'  
-          }
-        }    
-        </script>    
         <!-- 第二部分 標題切換 chin_2----------->
-        <div id="chin2_topbox" class="chin2_topbox">
+        <div id="chin2_topbox" class="chin2_topbox close">
             <div id="chin2_text1" class="chin2_text movietxtcolor">
                 <a href="javascript:void(0);">5月6日(一)~5月8日(三)</a>
             </div>
@@ -156,7 +110,7 @@
             </div>
         </div>
         <!-- 第二部分 電影內容 chin_2----------->
-        <div id="chin_2" class="chin_2">
+        <div id="chin_2" class="chin_2 close">
             <!--  電影內容 movie_all1----------->
             <div class="movie_all1 ">
                 <div id="movie1" class="movie">
@@ -990,46 +944,17 @@
 
             </div>
         </div>
-        <!-- 第二部分 電影內容切換  chin_2 script -->
-        <script>
-            var chin2_ch1 = document.querySelector('#chin2_text1')
-            var movie_all1 = document.querySelector('.movie_all1')
-            var chin2_ch2 = document.querySelector('#chin2_text2')
-            var movie_all2 = document.querySelector('.movie_all2')
 
-            chin2_ch1.addEventListener('click', ch1Handler)
-            chin2_ch2.addEventListener('click', ch2Handler)
-
-            function ch1Handler() {
-                if (movie_all1.classList.display = 'movie_none') {
-                    movie_all1.classList.remove('movie_none')
-                    movie_all2.classList.add('movie_none')
-                    chin2_ch1.classList.add('movietxtcolor')
-                    chin2_ch2.classList.remove('movietxtcolor')
-                   
-                }
-            }
-            function ch2Handler() {
-                if (movie_all2.classList.display = 'movie_none') {
-                    movie_all2.classList.remove('movie_none')
-                    movie_all1.classList.add('movie_none')
-                    chin2_ch1.classList.remove('movietxtcolor')
-                    chin2_ch2.classList.add('movietxtcolor')
-                  
-                }
-            }
-        </script>
         <!-- 活動專區 chin_3----------->
-        <div id="chin_3" class="chin_3">
+        <div id="chin_3" class="chin_3 close">
             <div class="chin3_txt">活動專區</div>
             <div class="chin3_bg"></div>
             <div class="chin3_ad" data-aos="fade-up" data-aos-duration="2000"></div>
         </div>
-
         <!-------------------------- 電影介紹 chin_4--------------------------  -->
         <script src="js/swiper.js"></script>
 
-        <div id="chin_4" class="chin_4">
+        <div id="chin_4" class="chin_4 close">
             <ul class="chin4_left">
                 <p>電影介紹</p>
             </ul>
@@ -1233,7 +1158,7 @@
         </div>
 
         <!----------------------------關於親親----chin_5------------------------------  -->
-        <div id="chin_5" class="chin_5">
+        <div id="chin_5" class="chin_5 close">
             <div class="chin5_box1">
                 <ul class="chin5_right">
                     <p>關於親親</p>
@@ -1268,7 +1193,7 @@
             </div>
         </div>
         <!-------------------------- 交通指南 -----chin_6---------------------  -->
-        <div id="chin_6" class="chin_6">
+        <div id="chin_6" class="chin_6 close">
             <ul class="chin6_left">
                 <p>交通指南</p>
             </ul>
@@ -1295,17 +1220,12 @@
         </div>
         <!---------------- -->
     </div>
-    <!--------------------------aos------------------------------------- -->
-    <script src="js/aos.js"></script>
-
-    <script>
-        AOS.init();
-    </script>
+   
     <!--------------------------------------------------------------  -->
     <!-------------------------- 414px --------------------------  -->
     <!--------------------------------------------------------------- -->
 
-    <div class="m_chinchin">
+    <div class="m_chinchin ">
         <!-- 浮動menu ----------->
         <nav class="m_chin1">
             <div class="m_navbar">
@@ -2554,7 +2474,17 @@
         </div>
     </div>
 
-    <!-- 切換java ---------------------------------------------->
+
+
+
+
+    <!--------------------------aos javascript------------------------------------- -->
+     <script src="js/aos.js"></script>
+
+     <script>
+         AOS.init();
+     </script>
+    <!-- 切換 javascript---------------------------------------------->
     <script>
         var m_link1 = document.querySelector('#m_link1')
         var m_link2 = document.querySelector('#m_link2')
@@ -2626,8 +2556,99 @@
             m_chin3.classList.add('m_movie_none')
         }
 
-    </script>
+       </script>
+    <!-- 浮動下拉關閉   javascript----------->
+    <script>
+    var title1 = document.querySelector('.title2')
+    var link_all =  document.querySelector('.link_all')
+    var link =  document.querySelector('.link')
+    var chin1 =  document.querySelectorAll(".close")
 
+    title1.addEventListener('click',chinopenHandler)
+    
+
+    function chinopenHandler(){
+    if(link_all.style.display == 'none'){
+        link_all.style.display ='block'
+    }else{
+        link_all.style.display = 'none'  
+      }
+    } 
+
+    if(document.documentElement.clientWidth >= 415&&document.documentElement.clientWidth <= 768){   
+
+        console.log(document.documentElement.clientWidth)
+
+        chin1.forEach(function(closelist) {
+    
+            closelist.addEventListener('click',closelistHandler)
+            function  closelistHandler(){
+                if(link_all.style.display == 'block'){
+                    link_all.style.display = 'none'
+                }else{
+                    link_all.style.display = 'none'   
+                }
+            }
+    })
+}
+     </script> 
+
+    <!-- facebook halalogo scroll javascript ----------->
+    <script>
+    var totop = document.querySelector('.totop')
+    var facebook = document.querySelector('.facebook')
+    var halalogo = document.querySelector('.halalogo')
+
+    window.addEventListener('scroll', scroll1)
+    window.addEventListener('scroll', scroll2)
+
+    function scroll1() {
+        if (document.documentElement.scrollTop >= 700) {
+            totop.classList.remove('movie_none')
+        } else {
+            totop.classList.add('movie_none')
+        }
+    }
+    function scroll2() {
+        if (document.documentElement.scrollTop >= 3500) {
+            facebook.classList.add('movie_none')
+            halalogo.classList.add('movie_none')
+        } else {
+            facebook.classList.remove('movie_none')
+            halalogo.classList.remove('movie_none')
+        }
+    }
+
+       </script>
+    <!-- 第二部分 電影內容切換  chin_2 script -->
+    <script>
+                var chin2_ch1 = document.querySelector('#chin2_text1')
+                var movie_all1 = document.querySelector('.movie_all1')
+                var chin2_ch2 = document.querySelector('#chin2_text2')
+                var movie_all2 = document.querySelector('.movie_all2')
+    
+                chin2_ch1.addEventListener('click', ch1Handler)
+                chin2_ch2.addEventListener('click', ch2Handler)
+    
+                function ch1Handler() {
+                    if (movie_all1.classList.display = 'movie_none') {
+                        movie_all1.classList.remove('movie_none')
+                        movie_all2.classList.add('movie_none')
+                        chin2_ch1.classList.add('movietxtcolor')
+                        chin2_ch2.classList.remove('movietxtcolor')
+                       
+                    }
+                }
+                function ch2Handler() {
+                    if (movie_all2.classList.display = 'movie_none') {
+                        movie_all2.classList.remove('movie_none')
+                        movie_all1.classList.add('movie_none')
+                        chin2_ch1.classList.remove('movietxtcolor')
+                        chin2_ch2.classList.add('movietxtcolor')
+                      
+                    }
+                }
+       </script>
 </body>
 
 </html>

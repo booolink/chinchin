@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            .example {
+                border: 1px solid black;
+                margin: 5px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="example">
+            A div with class="example"
+        </div>
+    
+        <div class="example">
+            Another div with class="example"
+        </div>
+    
+    
+        <p class="example">This is a p element with class="example".</p>
+    
+    
+        <script>
+            var examples = document.querySelectorAll(".example");
+            // console.log(examples); //陣列
+             //var 後變數A "examples"利用 foreach陣列 搜尋功能
+
+            examples.forEach(function(example){ //命名為'(example "變數命名為B")'，用這個命名的方法 列出陣列
+                // console.log(example); //物件
+                //利用變數B 新增一個功能  'click || mouseover'  新增變數C
+                // function C功能
+                example.addEventListener('mouseover', function(){
+                    example.style.backgroundColor = "red";
+                })
+            });
+        </script>
+</body>
+</html>

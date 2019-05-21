@@ -3,6 +3,9 @@
   /* outline: 1px solid red; */
 }
 @media screen and (max-width: 1240px) {
+  .link_all,.title_left,.title1{
+    display: block;
+  }
   .totop{
     width: 70px;
     height: 50px;
@@ -34,6 +37,9 @@
  
 }
 @media screen and (max-width: 1024px) {
+  .link_all,.title_left,.title1{
+    display: block;
+  }
   /*-- 第二部分 電影內容 chin_2-----------*/
   .chin_2{
     width: 700px;
