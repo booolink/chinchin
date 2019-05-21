@@ -24,7 +24,7 @@ a{
 .chinchin {
     display: block;
   }
-.m_chinchin {
+.m_chinchin,.menu768 {
     display: none;
   }
 /**-**********chinchin*******************-*/
@@ -194,6 +194,12 @@ a{
     margin-bottom: 8px;
 }
 /* --------------------menu--------------------------- */
+.link_all,.title_left,.title1{
+    display: block;
+  }
+  .title2{
+    display: none;
+  }
 .menu{
     border-radius:0.4rem;
     background-color: rgba(133, 227, 250, 0.13);
@@ -214,7 +220,7 @@ a{
     float: left; 
     color: rgba(201, 189, 189, 0.548);
 }
-.title{
+.title1,.title2{
     font-family:"微軟正黑體" ;
     font-size: 28pt;
     color: rgb(255, 255, 255);

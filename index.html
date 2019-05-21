@@ -39,7 +39,7 @@
                 }
             }
             function scroll2() {
-                if (document.documentElement.scrollTop >= 4000) {
+                if (document.documentElement.scrollTop >= 3500) {
                     facebook.classList.add('movie_none')
                     halalogo.classList.add('movie_none')
                 } else {
@@ -111,11 +111,12 @@
 
         <!-- 浮動menu ----------->
         <div class="menu">
-            <p class="title">親親戲院</p>
+            <p class="title1">親親戲院</p>
+            <p class="title2" >親親戲院</p>
             <ul class="title_left">
                 <p>Chin <br>Chin</p>
             </ul>
-            <ul class="link_all">
+            <ul class="link_all" >
                 <li class="link"><a class="acolor" href="#chin2_topbox">場次專區</a>
                     <div class="bg"></div>
                 </li>
@@ -133,6 +134,21 @@
                 </li>
             </ul>
         </div>
+        <script>
+        var title1 = document.querySelector('.title2')
+        var link_all =  document.querySelector('.link_all')
+        var link =  document.querySelector('.link')
+
+        title1.addEventListener('click',chinopenHandler)
+
+        function chinopenHandler(){
+        if(link_all.style.display == 'none'){
+            link_all.style.display ='block'
+        }else{
+            link_all.style.display = 'none'  
+          }
+        }    
+        </script>    
         <!-- 第二部分 標題切換 chin_2----------->
         <div id="chin2_topbox" class="chin2_topbox">
             <div id="chin2_text1" class="chin2_text movietxtcolor">
