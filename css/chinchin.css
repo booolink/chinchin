@@ -26,7 +26,7 @@ a{
 .chinchin {
     display: block;
   }
-.m_chinchin,.menu768 {
+.m_chinchin {
     display: none;
   }
 /**-**********chinchin*******************-*/
@@ -50,7 +50,7 @@ a{
     border-radius:5px; 
     background-color: red;
     position: fixed;
-    top: 550px;
+    top: 580px;
     right: 50px;
     z-index: 999;
 }
@@ -108,7 +108,7 @@ a{
   width: 95%;
   font-size:35px; 
   color: rgba(255, 255, 255, 0.74);
-  text-shadow: -2px -2px 10px white, 1px 1px #333;
+  text-shadow: -1px -1px 8px white, 1px 1px #333;
   text-align: center;
   margin: 15px auto;
   border-bottom: 1.8px solid #666;
@@ -152,7 +152,7 @@ a{
   /*票價*/
   width: 70px;
   color: rgba(255, 255, 255, 0.74);
-  text-shadow: -2px -2px 10px white, 1px 1px #333;
+  text-shadow: -1px -1px 2px white, 1px 1px #333;
   font-size: 18px;
   text-align: center;
 }
@@ -814,7 +814,6 @@ a{
 }
 .int_img{
     text-indent:5px;
-    font-size: 12pt;
     float: left;
     width: 108px;
     height: 140px;
