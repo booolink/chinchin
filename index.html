@@ -136,10 +136,10 @@
         <!-- 第二部分 標題切換 chin_2----------->
         <div id="chin2_topbox" class="chin2_topbox">
             <div id="chin2_text1" class="chin2_text movietxtcolor">
-                <a href="javascript:void();">5月6日(一)~5月8日(三)</a>
+                <a href="javascript:void(0);">5月6日(一)~5月8日(三)</a>
             </div>
             <div id="chin2_text2" class="chin2_text">
-                <a href="javascript:void();">5月9日(四)~5月11日(六)</a>
+                <a href="javascript:void(0);">5月9日(四)~5月11日(六)</a>
 
             </div>
         </div>
@@ -992,6 +992,7 @@
                     movie_all2.classList.add('movie_none')
                     chin2_ch1.classList.add('movietxtcolor')
                     chin2_ch2.classList.remove('movietxtcolor')
+                   
                 }
             }
             function ch2Handler() {
@@ -1000,6 +1001,7 @@
                     movie_all1.classList.add('movie_none')
                     chin2_ch1.classList.remove('movietxtcolor')
                     chin2_ch2.classList.add('movietxtcolor')
+                  
                 }
             }
         </script>
@@ -1400,11 +1402,11 @@
         <!--  電影內容 m_chin3----------->
         <div class="m_chin3 m_movie_none">
             <div id="m_chin3_topbox" class="m_chin3_topbox">
-                <div id="chin3_text1" class="chin3_text movietxtcolor">
-                    <a class="chin3_font" href="#">5月6日(一)~5月8日(三)</a>
+                <div id="m_chin3_text1" class="chin3_text movietxtcolor">
+                    <a class="chin3_font" href="javascript:void(0);">5月6日(一)~5月8日(三)</a>
                 </div>
-                <div id="chin3_text2" class="chin3_text">
-                    <a class="chin3_font" href="#">5月9日(四)~5月11日(六)</a>
+                <div id="m_chin3_text2" class="chin3_text">
+                    <a class="chin3_font" href="javascript:void(0);">5月9日(四)~5月11日(六)</a>
 
                 </div>
             </div>
@@ -1841,7 +1843,7 @@
                 </div>
             </div>
 
-            <div class="m_movie_all2 movie_none">
+            <div class="m_movie_all2 m_movie_none">
                 <div id="movie1" class="movie">
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
@@ -2243,31 +2245,31 @@
             <!-- 場次專區 Script-->
 
             <script>
-                var chin2_dis1 = document.querySelector('#chin3_text1')
-                var chin2_dis2 = document.querySelector('#chin3_text2')
-                var movie_all1 = document.querySelector('.m_movie_all1')
-                var movie_all2 = document.querySelector('.m_movie_all2')
+                var m_chin2_dis1 = document.querySelector('#m_chin3_text1')
+                var m_chin2_dis2 = document.querySelector('#m_chin3_text2')
+                var m_movie_all1 = document.querySelector('.m_movie_all1')
+                var m_movie_all2 = document.querySelector('.m_movie_all2')
                 var color = document.querySelector('.movietxtcolor')
 
-                chin2_dis1.addEventListener('click', dis1Hendler)
-                chin2_dis2.addEventListener('click', dis2Hendler)
+                m_chin2_dis1.addEventListener('click', dis1Hendler)
+                m_chin2_dis2.addEventListener('click', dis2Hendler)
 
                 function dis1Hendler() {
-                    movie_all1.classList.add('m_movie_block')
-                    movie_all1.classList.remove('m_movie_none')
-                    movie_all2.classList.add('m_movie_none')
-                    movie_all2.classList.remove('m_movie_block')
-                    chin2_dis1.classList.add('movietxtcolor')
-                    chin2_dis2.classList.remove('movietxtcolor')
+                if (m_movie_all1.classList.display = 'm_movie_none') {
+                    m_movie_all1.classList.remove('m_movie_none')
+                    m_movie_all2.classList.add('m_movie_none')
+                    m_chin2_dis1.classList.add('movietxtcolor')
+                    m_chin2_dis2.classList.remove('movietxtcolor')                  
                 }
-                function dis2Hendler() {
-                    movie_all1.classList.add('m_movie_none')
-                    movie_all1.classList.remove('m_movie_block')
-                    movie_all2.classList.add('m_movie_block')
-                    movie_all2.classList.remove('m_movie_none')
-                    chin2_dis2.classList.add('movietxtcolor')
-                    chin2_dis1.classList.remove('movietxtcolor')
+            }
+            function dis2Hendler() {
+                if (m_movie_all2.classList.display = 'm_movie_none') {
+                    m_movie_all2.classList.remove('m_movie_none')
+                    m_movie_all1.classList.add('m_movie_none')
+                    m_chin2_dis1.classList.remove('movietxtcolor')
+                    m_chin2_dis2.classList.add('movietxtcolor')
                 }
+            }
             </script>
 
         </div>
