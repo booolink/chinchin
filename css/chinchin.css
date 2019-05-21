@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 body {
   margin: 0;
@@ -49,11 +49,13 @@ a{
     font-size: 30px;
     border-radius:5px; 
     background-color: red;
-    color:white;
     position: fixed;
     top: 550px;
     right: 50px;
     z-index: 999;
+}
+.totop a{
+    color:white;
 }
 /* --------------------facebook--------------------------- */
 .facebook{
@@ -1088,7 +1090,7 @@ a{
 /* ------------------------------------------------------------- */
 .chin_6{
     width: 1140px;
-    height: 970px;
+    height: 700px;
     margin: auto;
     clear: both;
     position: relative;

@@ -1,8 +1,14 @@
 * {
   box-sizing: border-box;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 @media screen and (max-width: 1240px) {
+  .totop{
+    width: 80px;
+    height: 50px;
+    top: 550px;
+    right: 20px;
+}
 /* --------------------facebook--------------------------- */
 .facebook{
   width: 70px;
@@ -11,6 +17,7 @@
   background-size: cover;
   background-repeat:no-repeat; 
   border-radius:99px;
+  right: 100px;
 }
 /* --------------------halalogo--------------------------- */
 .halalogo{
@@ -21,6 +28,7 @@
   background-size: cover;
   background-repeat:no-repeat; 
   border-radius:99px;
+  right: 100px;
 }
 
  
@@ -34,9 +42,14 @@
   .movie{
     width: calc(100% / 3 - 7px);
   }
+  .totop{
+    width: 80px;
+    height: 50px;
+    top: 550px;
+    right: 1px;
+}
   /* --------------------facebook--------------------------- */
   .facebook{
-    
     left: 5px;
     top: 90px;
     border-radius:5px;
@@ -48,7 +61,7 @@
     border-radius:5px;
   }
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   /*-- 第二部分 電影內容 chin_2-----------*/
   
   .link_all,.title_left,.title1{
@@ -75,7 +88,7 @@
     margin-top: 30px;
 }
   .chinchin {
-    width: 768px;
+    width: 765px;
     margin: auto;
   }
   .chin_1 {
