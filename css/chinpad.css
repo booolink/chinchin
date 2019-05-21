@@ -2,7 +2,44 @@
   box-sizing: border-box;
   /* outline: 1px solid red; */
 }
+@media screen and (max-width: 1240px) {
+/* --------------------facebook--------------------------- */
+.facebook{
+  width: 70px;
+  height: 70px;
+  background-image: url(../img/facebook-icon.jpg);
+  background-size: cover;
+  background-repeat:no-repeat; 
+  border-radius:99px;
+}
+/* --------------------halalogo--------------------------- */
+.halalogo{
+  width: 70px;
+  height: 70px;
+  background-image: url(../img/halalogo-04.jpg);
+  background-position: left;
+  background-size: cover;
+  background-repeat:no-repeat; 
+  border-radius:99px;
+}
 
+ 
+}
+@media screen and (max-width: 1024px) {
+  /* --------------------facebook--------------------------- */
+  .facebook{
+    
+    left: 5px;
+    top: 90px;
+    border-radius:5px;
+  }
+  /* --------------------halalogo--------------------------- */
+  .halalogo{
+    left: 83px;
+    top: 90px;
+    border-radius:5px;
+  }
+}
 @media screen and (max-width: 415px) {
   .chinchin {
     display: none;
