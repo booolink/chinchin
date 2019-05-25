@@ -3,13 +3,14 @@
   /* outline: 1px solid red; */
 }
 @media screen and (max-width: 1240px) {
+
   .link_all,.title_left,.title1{
     display: block;
   }
   .totop{
     width: 70px;
     height: 50px;
-    top: 550px;
+    bottom: 50px;
     right: 20px;
 }
 /* --------------------facebook--------------------------- */
@@ -20,7 +21,7 @@
   background-size: cover;
   background-repeat:no-repeat; 
   border-radius:99px;
-  right: 100px;
+ 
 }
 /* --------------------halalogo--------------------------- */
 .halalogo{
@@ -31,12 +32,14 @@
   background-size: cover;
   background-repeat:no-repeat; 
   border-radius:99px;
-  right: 100px;
+  
 }
 
  
 }
 @media screen and (max-width: 1024px) {
+
+
   .link_all,.title_left,.title1{
     display: block;
   }
@@ -51,7 +54,7 @@
   .totop{
     width: 80px;
     height: 50px;
-    top: 550px;
+    bottom: 50px;
     right: 1px;
 }
   /* --------------------facebook--------------------------- */
@@ -87,21 +90,16 @@
 }
 }
 @media screen and (max-width: 768px) {
+  .chinchin {
+    width: 765px;
+    margin: auto;
+  }
   /*-- 第二部分 電影內容 chin_2-----------*/
   
   .link_all,.title_left,.title1{
     display: none;
   }
-  .title2{
-    margin: 0;
-    box-shadow:3px 3px 5px rgba(238, 235, 235, 0.76);
-    background-color: rgba(255, 0, 0, 0.301);
-    display: block;
-    width: 80px;
-    text-align: center;
-    border-radius:5px;
-    font-size: 22pt; 
-  }
+ 
   .link{
     width: 120px;
     height: 30px;
@@ -111,12 +109,9 @@
   .link_all{
     width: 90px;
     margin-left: 0px;
-    margin-top: 30px;
+    margin-top: 90px;
 }
-  .chinchin {
-    width: 765px;
-    margin: auto;
-  }
+
   .chin_1 {
     width: 90%;
   }
@@ -132,9 +127,26 @@
     width: 90%;
     height: 970px;
   }
-  .chin5{
+  .chin_5{
     width: 90%;
   }
+  .chin5_box1{
+    width: 100%;
+
+  }
+  .chin5_right{
+      right: 50px ;
+  }
+  .chin5_txtbox1{
+    width: 80%;
+    top: 50px;
+  }
+  .chin5_txtbox {
+   width: 70%;
+   top: 280px;
+   right: 80px;
+  }
+ 
   .chin_6{
     width: 90%;
   }
@@ -162,12 +174,24 @@
     font-size: 12px;
     font-family: '微軟正黑體';
     font-weight: 900;
+} 
+/* --------------------Menu--------------------------- */ 
+     .title2{
+       margin: 0;
+       box-shadow:3px 3px 5px rgba(238, 235, 235, 0.76);
+       background-color: rgba(255, 0, 0, 0.301);
+       display: block;
+       width: 80px;
+       text-align: center;
+       border-radius:5px;
+       font-size: 22pt;
+       position: absolute;
+     
+       
 }
-   
-   
     /* --------------------facebook--------------------------- */
     .facebook{
-      left: 5px;
+     
       top: 10px;
       border-radius:5px;
       box-shadow:3px 3px 5px rgba(238, 235, 235, 0.76);
@@ -181,11 +205,16 @@
     }
 }
 @media screen and (max-width: 415px) {
-  .chinchin {
+  .chin_1,.chin_3,
+  .chin_5,
+  .chin_6,#chin2_topbox,
+  .menu,.facebook,.halalogo,
+  .totop
+   {
     display: none;
   }
-
-  .m_chinchin{
+ 
+  .chinchin{
     position: relative;
     width: 374px;
     display: block;
@@ -236,8 +265,6 @@
     position: relative;
     border-radius: 3px;
     z-index: 999;
-    /* box-shadow: 0px 0px 2px 2px rgba(102, 102, 102, 0.192); */
-    /* background-color: rgba(255, 255, 255, 0.068); */
   }
   .line {
     width: 100%;
@@ -321,7 +348,6 @@
   .m_link_all {
     display: flex;
     justify-content: space-between;
-    /* position: fixed; */
     z-index: 999;
   }
   .m_link {
@@ -359,21 +385,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
-  
+    clear: both;
   }
   /********************************/
-  .m_chin3 {
+  #m_chin3 {
     width: 90%;
-    margin: auto;
+    margin: 10px auto;
     padding: 5px;
- 
+    
   }
   .m_chin3_topbox {
     width: 100%;
     padding: 3px 5px;
     height: 25px;
     border-radius: 4px;
-    display: flex;
+    display: flex ;
     justify-content: space-between;
     background-color: rgba(27, 30, 228, 0.425);
     line-height: 25px;
@@ -403,14 +429,6 @@
     float: left;
     text-align: center;
   }
-  .m_movie_all1 {
-    /*電影第一頁面*/
-    width: 100%;
-  }
-  .m_movie_all2 {
-    /*電影第二頁面*/
-    width: 100%;
-  }
   .Grading_all {
     /*分級圖標設定*/
     width: 20px;
@@ -423,7 +441,6 @@
     /*電影標題設定*/
     width: calc(100% - 20px - 3px);
     float: left;
-    /* text-indent: 2px; */
     text-align: center;
     color: white;
     margin: auto;
@@ -448,12 +465,7 @@
     color: white;
     text-align: center;
   }
-  .m_movie_block {
-    display: block;
-  }
-  .m_movie_none {
-    display: none;
-  }
+  
 
   /************************m_chin4**********************************/
   .m_chin4 {
@@ -470,9 +482,9 @@
     border-radius: 8px;
     opacity: 0.8;
   }
-  /************************m_chin5**********************************/
-  .m_chin5 {
-    width: 80%;
+  /************************chin_4**********************************/
+  .chin_4 {
+    width: 100%;
     margin: auto;
   }
   .introduction {
@@ -480,15 +492,19 @@
     margin-bottom: 1300px;
   }
   .swiper-slide {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   .int_img{
     width: 90px;
     height: 120px;
     margin: 0;
   }
+  .int_txt{
+    width: 100px;
+ 
+   }
   .swiper-slide{
-    width: 150px;
+    width: 190px !important
   }
   #April {
     width: 100%;
@@ -542,18 +558,18 @@
     z-index: -1;
   }
 
-  .m_chin7 {
+  #m_chin7 {
     width: 100%;
+    height: 100px;
     margin: auto;
     position: relative;
-    z-index: -5;
   }
   .googlemap {
     width: 350px;
     height: 300px;
     left: 15px;
     top: 0px;
-    z-index: -2;
+    z-index: -1;
   }
   .m_chin7_bus {
     width: 350px;

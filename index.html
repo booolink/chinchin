@@ -10,17 +10,103 @@
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/chinpad.css">
+    <link rel="stylesheet" href="css/lightbox.css">
 </head>
 
 <body>
 
-    <div class="chinchin">
-        <div class="totop movie_none"><a href="#">Top</a></div>
+    <div id="chinchin" class="chinchin">
+          <!-- pc 浮動menu ----------->
+          <div class="menu">
+                <p class="title1">親親戲院</p>
+                <p class="title2" >親親戲院</p>
+                <ul class="title_left">
+                    <p>Chin <br>Chin</p>
+                </ul>
+                <ul class="link_all" >
+                    <li class="link"><a class="acolor" href="#chin2_topbox">場次專區</a>
+                        <div class="bg"></div>
+                    </li>
+                    <li class="link"><a class="acolor" href="#chin_3">活動專區</a>
+                        <div class="bg"></div>
+                    </li>
+                    <li class="link"><a class="acolor" href="#chin_4">電影介紹</a>
+                        <div class="bg"></div>
+                    </li>
+                    <li class="link"><a class="acolor" href="#chin_5">關於親親</a>
+                        <div class="bg"></div>
+                    </li>
+                    <li class="link"><a class="acolor" href="#chin_6">交通指南</a>
+                        <div class="bg"></div>
+                    </li>
+                </ul>
+            </div>
+         <!-- 414px  浮動menu ----------->
+         <nav id="m_chin1" class="m_chin1 movie_none">
+                <div class="m_navbar">
+                    <div class="m_menu">
+                        <div id="line1" class="line"></div>
+                        <div id="line2" class="line"></div>
+                        <div id="line3" class="line"></div>
+                    </div>
+                    <div class="m_menu_link m_menu_link_none">
+                        <ul class="m_link_all">
+                            <li id="m_link1" class="m_link"><a class="m_acolor" href="#">場次專區</a>
+                                <div class="m_bg"></div>
+                            </li>
+                            <li id="m_link2" class="m_link"><a class="m_acolor" href="#">活動專區</a>
+                                <div class="m_bg"></div>
+                            </li>
+                            <li id="m_link3" class="m_link"><a class="m_acolor" href="#">電影介紹</a>
+                                <div class="m_bg"></div>
+                            </li>
+                            <li id="m_link4" class="m_link"><a class="m_acolor" href="#">關於親親</a>
+                                <div class="m_bg"></div>
+                            </li>
+                            <li id="m_link5" class="m_link"><a class="m_acolor" href="#">交通指南</a>
+                                <div class="m_bg"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chinLOGO">
+                        <p class="m_chinLOGO">親親影城</p>
+                    </div>
+                </div>
+                <script>
+                    let menu_ani = document.querySelector('.m_menu')
+                    let line1 = document.querySelector('#line1')
+                    let line2 = document.querySelector('#line2')
+                    let line3 = document.querySelector('#line3')
+                    let menu_link = document.querySelector('.m_menu_link_none')
+    
+                    menu_ani.addEventListener('click', menuHandler)
+    
+    
+    
+                    function menuHandler() {
+                        line1.classList.toggle('line1_ani')
+                        line2.classList.toggle('line2_ani')
+                        line3.classList.toggle('line3_ani')
+                        menu_link.classList.toggle('m_menu_link_none')
+                        menu_link.classList.toggle('m_menu_link_block')
+                    }
+    
+                </script>
+            </nav>
+         <!-- PC  右側浮動menu----------->
+        <div class="totop movie_none"><a href="#chinchin">Top</a></div>
 
         <a class="facebook"
             href="https://www.facebook.com/Chin-Chin%E8%A6%AA%E8%A6%AA%E6%88%B2%E9%99%A2-%E5%8F%B0%E4%B8%AD%E4%BA%BA%E6%B0%A3%E9%9B%BB%E5%BD%B1%E9%99%A2-319048852447/?ref=hl"></a>
 
         <a class="halalogo" href="http://www.halabakery.com.tw/"></a>
+        <!--414px  空白下推部分 m_hoot----------->
+        <div id="m_hoot" class="m_hoot"></div>
+         <!--414px  vip m_chin2----------->
+         <div  id="m_chin2" class="m_chin2 movie_none">
+                <div class="m_chin2_vip"></div>
+            </div>
+  
         <!-- 標題含票價 chin_1----------->
         <nav class='chin_1 close'>
             <div class="vip"></div>
@@ -74,80 +160,121 @@
                 </ul>
             </div>
         </nav>
-        <!-- 浮動menu ----------->
-        <div class="menu">
-            <p class="title1">親親戲院</p>
-            <p class="title2" >親親戲院</p>
-            <ul class="title_left">
-                <p>Chin <br>Chin</p>
-            </ul>
-            <ul class="link_all" >
-                <li class="link"><a class="acolor" href="#chin2_topbox">場次專區</a>
-                    <div class="bg"></div>
-                </li>
-                <li class="link"><a class="acolor" href="#chin_3">活動專區</a>
-                    <div class="bg"></div>
-                </li>
-                <li class="link"><a class="acolor" href="#chin_4">電影介紹</a>
-                    <div class="bg"></div>
-                </li>
-                <li class="link"><a class="acolor" href="#chin_5">關於親親</a>
-                    <div class="bg"></div>
-                </li>
-                <li class="link"><a class="acolor" href="#busimg">交通指南</a>
-                    <div class="bg"></div>
-                </li>
-            </ul>
-        </div>
-        <!-- 第二部分 標題切換 chin_2----------->
-        <div id="chin2_topbox" class="chin2_topbox close">
-            <div id="chin2_text1" class="chin2_text movietxtcolor">
-                <a href="javascript:void(0);">5月6日(一)~5月8日(三)</a>
-            </div>
-            <div id="chin2_text2" class="chin2_text">
-                <a href="javascript:void(0);">5月9日(四)~5月11日(六)</a>
+        
+         <!--  414px 票價 m_chin0----------->
+         <div id="m_chin0" class="m_chin0 movie_none">
+                        <div class="m_ticket ">
+                            <h1 class="ticket_h1">電影票價</h1>
+                            <ul class="ticket_ul1">
+                                <li id="ticket_li0" class="ticket_li">
+                                    <span class="h2d diu">2D</span><span class="h3d diu">3D</span>
+                                </li>
+                                <li id="ticket_li1" class="ticket_li">
+                                    <span class="diu_li">全票</span><span class="diu_li_m">210元</span><span
+                                        class="diu_li_m">300元</span>
+                                    <p class="ticket_li_txt">一般成人</p>
+                                </li>
+                                <li id="ticket_li2" class="ticket_li">
+                                    <span class="diu_li">半票</span><span class="diu_li_m">190元</span><span
+                                        class="diu_li_m">280元</span>
+                                    <p class="ticket_li_txt">早場、晚場、學生、軍警。須出示證件。</p>
+                                </li>
+                                <li id="ticket_li3" class="ticket_li">
+                                    <span class="diu_li">會員票</span><span class="diu_li_m">190元</span><span
+                                        class="diu_li_m">280元</span>
+                                    <p class="ticket_li_txt">須出示會員卡。</p>
+                                </li>
+                                <li id="ticket_li4" class="ticket_li">
+                                    <span class="diu_li">兒童票</span><span class="diu_li_m">190元</span><span
+                                        class="diu_li_m">280元</span>
+                                    <p class="ticket_li_txt">滿6歲以上~未滿12歲之兒童。須出示證件。</p>
+                                </li>
+                                <li id="ticket_li5" class="ticket_li">
+                                    <span class="diu_li">愛心票</span><span class="diu_li_m">190元</span><span
+                                        class="diu_li_m">280元</span>
+                                    <p id="ticket_li5_txt" class="ticket_li_txt">持有身心障礙手冊(陪同僅限一位)、年滿65歲以上長者，購票及入場須出示證件，限本人使用。<br>
+                                        滿2歲以上~未滿6歲之兒童，限觀賞普遍級電影。須出示證件。</p>
+            
+                                </li>
+                            </ul>
+                            <ul class="ticket_ul2">
+                                <li class="ticket_li2_txt">持優待票觀賞3D影片須補80元、持招待票觀賞3D影片須補150元。</li>
+                                <li class="ticket_li2_txt">2D或3D影片，未滿2歲且不占位之兒童無須購票可免費入場觀賞普遍級影片，每位兒童至少需由至少一位已購票之成人陪伴。</li>
+                                <li class="ticket_li2_vip">申辦會員卡立即享有會員優惠</li>
+                            </ul>
+                            <ul class="ticket_ul3">
+                                <li class="ticket_li3_txt">憑會員卡現金購票 3D版 $280元、2D版 $190元。</li>
+                                <li id="ticket_li3_txt2" class="ticket_li3_txt">免費贈送 爆米花+飲料 兌換券</li>
+                            </ul>
+                            <ul class="ticket_ul4">
+                                <li class="ticket_li4_txt">申辦會員卡期限兩年、酌收工本費100元、舊卡換新卡工本費50元、請至親親影城一樓票房現場申請辦理。
+                                    <br> 持親親影城會員卡至一樓哈拉烘焙消費可享95折優惠。
+                                </li>
+                            </ul>
+                        </div>
+          </div>
 
+      
+        <!--  PC 標題切換 chin_2----------->
+        <div id="chin2_topbox" class="chin2_topbox close">
+            <!-- <div id="chin2_text1" class="chin2_text movietxtcolor">
+                <a href="javascript:void(0);">5月24日(五)~5月24日(五)</a>
+            </div> -->
+            <div id="chin2_text2" class="chin2_text">
+                <a href="javascript:void(0);">5月25日(六)~5月28日(二)</a>
             </div>
         </div>
-        <!-- 第二部分 電影內容 chin_2----------->
+        <!--  moblie 切換標題 m_chin3----------->
+        <div id="m_chin3" class="m_chin3_topbox movie_none">
+                    <div id="m_chin3_text1" class="chin3_text movietxtcolor">
+                        <a class="chin3_font" href="javascript:void(0);">5月24日(五)~5月24日(五)</a>
+                   </div>
+                    <div id="m_chin3_text2" class="chin3_text">
+                      <a class="chin3_font" href="javascript:void(0);">5月25日(六)~5月28日(二)</a>
+                   </div>
+        </div>
+        <!--  場次專區 chin_2----------->
         <div id="chin_2" class="chin_2 close">
+            
             <!--  電影內容 movie_all1----------->
             <div class="movie_all1 ">
                 <div id="movie1" class="movie">
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
                         <!-- 分級ico -->
-                        <img class="Grading_all Grading1-1">
-                        <p id="movie_test1-1" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
+                        <img class="Grading_all Grading0plus" >
+                        <p id="movie_test1-1" class="text">阿拉丁<br>Aladdin</p>
                     </div>
                     <div class="movebox_1">
                         <!-- 電影海報 -->
                         <div class="movie_img">
-                            <div class="img_all img1-1"></div>
+                            <div class="img_all img1_1"></div>
                         </div>
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
                                 <li>2D-英語</li>
-                                <li>09:40</li>
-                                <li>13:00</li>
-                                <li>16:20</li>
-                                <li>19:40</li>
-                                <li>23:00</li>
+                                <li>10:10</li>
+                                <li>12:40</li>
+                                <li>15:10</li>
+                                <li>17:40</li>
+                                <li>20:10</li>
+                                <li>22:40</li>                            
+                                <li>01:00</li>
                             </ul>
                         </div>
                     </div>
                     <div class="movebox_2">
                         <div class="leftdown">
                             <!-- 電影廳 -->
-                            <div class="movie_living movie_living1-1"></div>
+                            <div class="movie_living movie_living1_1"></div>
                             <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
+                            <a href="images/Aladdin.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
+                                <li>普遍級</li>
+                                <li>片長：128分</li>
                             </ul>
                         </div>
                     </div>
@@ -156,32 +283,34 @@
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
                         <!-- 分級ico -->
-                        <img class="Grading_all Grading2-1">
-                        <p id="movie_test2" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
+                        <img class="Grading_all Grading0plus">
+                        <p id="movie_test2" class="text">五月天人生無限公司<br>Mayday Life</p>
                     </div>
                     <div class="movebox_1">
                         <!-- 電影海報 -->
                         <div class="movie_img">
-                            <div class="img_all img2-1"></div>
+                            <div class="img_all img1_2"></div>
                         </div>
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>11:20</li>
+                                <li>3D-國語</li>
+                                <li>10:00</li>
+                                <li>12:20</li>
                                 <li>14:40</li>
-                                <li>18:00</li>
-                                <li>21:20</li>
-                                <li>00:40</li>
+                                <li>17:00</li>
+                                <li>19:20</li>
+                                <li>21:40</li>
+                                <li>00:00</li>                    
                             </ul>
                         </div>
                     </div>
                     <div class="movebox_2">
                         <div class="leftdown">
                             <!-- 電影廳 -->
-                            <div class="movie_living movie_living2-1"></div>
+                            <div class="movie_living movie_living1_2"></div>
                             <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
+                            <a href="images/Mayday Life.PNG"  data-lightbox="a2" > <div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
@@ -195,37 +324,36 @@
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
                         <!-- 分級ico -->
-                        <img class="Grading_all Grading3-1">
-                        <p id="movie_test3" class="text">地獄怪客：血后的崛起<br>Hellboy: Rise of the Blood Queen</p>
+                        <img class="Grading_all Grading0plus">
+                        <p id="movie_test3" class="text">阿拉丁<br>Aladdin</p>
                     </div>
                     <div class="movebox_1">
                         <!-- 電影海報 -->
                         <div class="movie_img">
-                            <div class="img_all img3-1"></div>
+                            <div class="img_all img1_1"></div>
                         </div>
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:20</li>
-                                <!-- <li>13:00</li> -->
-                                <!-- <li>16:20</li> -->
-                                <!-- <li>19:40</li> -->
-                                <!-- <li>23:00</li> -->
+                                <li>2D-國語</li>
+                                <li>11:20</li>
+                                <li>13:50</li>
+                                <li>16:20</li>
+                                <li>18:50</li>
                             </ul>
                         </div>
                     </div>
                     <div class="movebox_2">
                         <div class="leftdown">
                             <!-- 電影廳 -->
-                            <div class="movie_living movie_living3-1"></div>
+                            <div class="movie_living movie_living1_3"></div>
                             <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
+                            <a href="images/Aladdin.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：121分</li>
+                                <li>普遍級</li>
+                                <li>片長：128分</li>
                             </ul>
                         </div>
                     </div>
@@ -234,37 +362,34 @@
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
                         <!-- 分級ico -->
-                        <img class="Grading_all Grading4-1">
-                        <p id="movie_test4" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
+                        <img class="Grading_all Grading0plus">
+                        <p id="movie_test4" class="text">阿拉丁<br>Aladdin</p>
                     </div>
                     <div class="movebox_1">
                         <!-- 電影海報 -->
                         <div class="movie_img">
-                            <div class="img_all img4-1"></div>
+                            <div class="img_all img1_1"></div>
                         </div>
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
                                 <li>2D-英語</li>
-                                <li>12:40</li>
-                                <li>16:00</li>
-                                <li>19:20</li>
-                                <li>22:40</li>
-                                <!-- <li>23:00</li> -->
+                                <li>21:20</li>
+                                <li>23:50</li>                               
                             </ul>
                         </div>
                     </div>
                     <div class="movebox_2">
                         <div class="leftdown">
                             <!-- 電影廳 -->
-                            <div class="movie_living movie_living4-1"></div>
+                            <div class="movie_living movie_living1_3"></div>
                             <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
+                            <a href="images/Aladdin.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
+                                <li>普遍級</li>
+                                <li>片長：128分</li>
                             </ul>
                         </div>
                     </div>
@@ -273,328 +398,13 @@
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
                         <!-- 分級ico -->
-                        <img class="Grading_all Grading5-1">
-                        <p id="movie_test5" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
+                        <img class="Grading_all Grading0plus">
+                        <p id="movie_test5" class="text">名偵探皮卡丘<br>Pokemon Detective Pikachu</p>
                     </div>
                     <div class="movebox_1">
                         <!-- 電影海報 -->
                         <div class="movie_img">
-                            <div class="img_all img5-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:40</li>
-                                <li>14:00</li>
-                                <li>17:20</li>
-                                <li>20:40</li>
-                                <li>00:00</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living5-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie6" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading6-1">
-                        <p id="movie_test6" class="text">禁入墳場<br>Pet Sematary</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img6-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:00</li>
-                                <!-- <li>13:00</li> -->
-                                <!-- <li>16:20</li> -->
-                                <!-- <li>19:40</li> -->
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living6-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：101分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie7" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading7-1">
-                        <p id="movie_test7" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img7-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>12:00</li>
-                                <li>15:20</li>
-                                <li>18:40</li>
-                                <li>22:00</li>
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living7-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie8" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading8-1">
-                        <p id="movie_test8" class="text">哭泣的女人<br>The Curse of La Llorona</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img8-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:30</li>
-                                <li>14:30</li>
-                                <li>16:30</li>
-                                <li>20:30</li>
-                                <li>22:30</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living8-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：94分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie9" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading9-1">
-                        <p id="movie_test9" class="text">禁入墳場<br>Pet Sematary</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img9-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>12:30</li>
-                                <li>18:30</li>
-                                <li>00:30</li>
-                                <!-- <li>19:40</li> -->
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living9-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：101分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie10" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading10-1">
-                        <p id="movie_test9" class="text">大冒險家<br>Missing Link</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img10-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-國語</li>
-                                <li>10:00</li>
-                                <li>14:00</li>
-                                <li>18:00</li>
-                                <li>22:00</li>
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living10-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：95分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie11" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading11-1">
-                        <p id="movie_test9" class="text">大冒險家<br>Missing Link</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img11-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>12:00</li>
-                                <li>16:00</li>
-                                <li>20:00</li>
-                                <li>00:00</li>
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living11-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：95分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <!--  電影內容 movie_all2----------->
-            <div class="movie_all2 movie_none">
-                <div id="movie1" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading1-2">
-                        <p id="movie_test1-1" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img1-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>09:40</li>
-                                <li>13:00</li>
-                                <li>16:20</li>
-                                <li>19:40</li>
-                                <li>23:00</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living1-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie2" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading2-2">
-                        <p id="movie_test2" class="text">名偵探皮卡丘 <br>Pokemon Detective Pikachu</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img2-2"></div>
+                            <div class="img_all img1_3"></div>
                         </div>
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
@@ -614,133 +424,14 @@
                     <div class="movebox_2">
                         <div class="leftdown">
                             <!-- 電影廳 -->
-                            <div class="movie_living movie_living2-2"></div>
+                            <div class="movie_living movie_living1_5"></div>
                             <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
+                            <a href="images/Pokemon.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
                                 <li>普遍級</li>
                                 <li>片長：105分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie3" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading3-2">
-                        <p id="movie_test3" class="text">名偵探皮卡丘<br>Pokemon Detective Pikachu</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img3-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>11:00</li>
-                                <li>13:10</li>
-                                <li>15:20</li>
-                                <li>19:40</li>
-                                <li>21:50</li>
-                                <li>00:00</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living3-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：105分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie4" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading4-2">
-                        <p id="movie_test4" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img4-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>11:20</li>
-                                <li>14:40</li>
-                                <li>18:00</li>
-                                <li>21:20</li>
-                                <li>00:40</li>
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living4-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie5" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading5-2">
-                        <p id="movie_test5" class="text">大冒險家<br>Missing Link</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img5-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-國語</li>
-                                <li>10:20</li>
-                                <!-- <li>14:00</li> -->
-                                <!-- <li>17:20</li> -->
-                                <!-- <li>20:40</li> -->
-                                <!-- <li>00:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living5-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：95分</li>
                             </ul>
                         </div>
                     </div>
@@ -749,31 +440,31 @@
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
                         <!-- 分級ico -->
-                        <img class="Grading_all Grading6-2">
-                        <p id="movie_test6" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
+                        <img class="Grading_all Grading6plus">
+                        <p id="movie_test6" class="text">復仇者聯盟4：終局之戰<br>Avengers:Endgame</p>
                     </div>
                     <div class="movebox_1">
                         <!-- 電影海報 -->
                         <div class="movie_img">
-                            <div class="img_all img6-2"></div>
+                            <div class="img_all img1_4"></div>
                         </div>
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
                                 <li>2D-英語</li>
-                                <li>12:30</li>
-                                <li>15:50</li>
-                                <li>19:10</li>
-                                <li>22:30</li>
+                                <li>10:00</li>
+                                <li>15:20</li>
+                                <li>20:40</li>
+                                <li>00:20</li>
                             </ul>
                         </div>
                     </div>
                     <div class="movebox_2">
                         <div class="leftdown">
                             <!-- 電影廳 -->
-                            <div class="movie_living movie_living6-2"></div>
+                            <div class="movie_living movie_living1_6"></div>
                             <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
+                            <a href="images/Avengers4.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
@@ -787,35 +478,109 @@
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
                         <!-- 分級ico -->
-                        <img class="Grading_all Grading7-2">
-                        <p id="movie_test7" class="text">詐騙女神<br>The Hustle</p>
+                        <img class="Grading_all Grading0plus">
+                        <p id="movie_test7" class="text">狗狗的旅程<br>A Dog’s Journey</p>
                     </div>
                     <div class="movebox_1">
                         <!-- 電影海報 -->
                         <div class="movie_img">
-                            <div class="img_all img7-2"></div>
+                            <div class="img_all img1_5"></div>
                         </div>
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
                                 <li>2D-英語</li>
-                                <li>10:30</li>
-                                <li>12:30</li>
-                                <li>14:30</li>
-                                <li>16:30</li>
-                                <li>18:30</li>
-                                <li>20:30</li>
-                                <li>22:30</li>
-                                <li>00:30</li>
+                                <li>13:20</li>
+                                <li>18:40</li>
                             </ul>
                         </div>
                     </div>
                     <div class="movebox_2">
                         <div class="leftdown">
                             <!-- 電影廳 -->
-                            <div class="movie_living movie_living7-2"></div>
+                            <div class="movie_living movie_living1_6"></div>
                             <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
+                            <a href="images/Dog.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
+                        </div>
+                        <div class="rightdown">
+                            <ul class="movie_time2">
+                                <li>普遍級</li>
+                                <li>片長：108分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie8" class="movie">
+                    <!-- 電影標題 -->
+                    <div class="movie_text movie_text_1">
+                        <!-- 分級ico -->
+                        <img class="Grading_all Grading15plus">
+                        <p id="movie_test8" class="text">捍衛任務3：全面開戰<br>Chapter3:Parabellum</p>
+                    </div>
+                    <div class="movebox_1">
+                        <!-- 電影海報 -->
+                        <div class="movie_img">
+                            <div class="img_all img1_6"></div>
+                        </div>
+                        <!-- 電影時刻 -->
+                        <div class="movie_time movie_time1">
+                            <ul class="movie_time_list movie_time_list1">
+                                <li>2D-英語</li>
+                                <li>10:00</li>
+                                <li>12:30</li>
+                                <li>15:00</li>
+                                <li>17:30</li>
+                                <li>20:00</li>
+                                <li>22:30</li>
+                                <li>01:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movebox_2">
+                        <div class="leftdown">
+                            <!-- 電影廳 -->
+                            <div class="movie_living movie_living1_7"></div>
+                            <!-- 電影介紹圖標 -->
+                            <a href="images/Parabellum.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
+                        </div>
+                        <div class="rightdown">
+                            <ul class="movie_time2">
+                                <li>輔15歲級</li>
+                                <li>片長：131分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie9" class="movie">
+                    <!-- 電影標題 -->
+                    <div class="movie_text movie_text_1">
+                        <!-- 分級ico -->
+                        <img class="Grading_all Grading6plus">
+                        <p id="movie_test9" class="text">詐騙女神<br>The Hustle</p>
+                    </div>
+                    <div class="movebox_1">
+                        <!-- 電影海報 -->
+                        <div class="movie_img">
+                            <div class="img_all img1_7"></div>
+                        </div>
+                        <!-- 電影時刻 -->
+                        <div class="movie_time movie_time1">
+                            <ul class="movie_time_list movie_time_list1">
+                                <li>2D-英語</li>
+                                <li>10:20</li>
+                                <li>14:00</li>
+                                <li>17:40</li>
+                                <li>21:20</li>
+                                <li>01:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movebox_2">
+                        <div class="leftdown">
+                            <!-- 電影廳 -->
+                            <div class="movie_living movie_living1_8"></div>
+                            <!-- 電影介紹圖標 -->
+                            <a href="images/詐騙女神.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
@@ -825,40 +590,356 @@
                         </div>
                     </div>
                 </div>
-                <div id="movie8" class="movie">
+                <div id="movie10" class="movie">
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
                         <!-- 分級ico -->
-                        <img class="Grading_all Grading8-2">
-                        <p id="movie_test8" class="text">哭泣的女人<br>The Curse of La Llorona</p>
+                        <img class="Grading_all Grading12plus">
+                        <p id="movie_test9" class="text">城市獵人<br>City Hunter</p>
                     </div>
                     <div class="movebox_1">
                         <!-- 電影海報 -->
                         <div class="movie_img">
-                            <div class="img_all img8-2"></div>
+                            <div class="img_all img1_8"></div>
                         </div>
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:00</li>
-                                <li>14:00</li>
-                                <li>18:00</li>
-                                <li>22:00</li>
+                                <li>2D-法語</li>
+                                <li>12:10</li>
+                                <li>15:50</li>
+                                <li>19:30</li>
+                                <li>23:10</li>
                             </ul>
                         </div>
                     </div>
                     <div class="movebox_2">
                         <div class="leftdown">
                             <!-- 電影廳 -->
-                            <div class="movie_living movie_living8-2"></div>
+                            <div class="movie_living movie_living1_8"></div>
                             <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
+                            <a href="images/City Hunter.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
+                        </div>
+                        <div class="rightdown">
+                            <ul class="movie_time2">
+                                <li>輔12歲級</li>
+                                <li>片長：91分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!--  電影內容 movie_all2----------->
+             <div class="movie_all2 movie_none">
+                <div id="movie1" class="movie">
+                    <!-- 電影標題 -->
+                    <div class="movie_text movie_text_1">
+                        <!-- 分級ico -->
+                        <img class="Grading_all Grading0plus" >
+                        <p id="movie_test1-1" class="text">阿拉丁<br>Aladdin</p>
+                    </div>
+                    <div class="movebox_1">
+                        <!-- 電影海報 -->
+                        <div class="movie_img">
+                            <div class="img_all img1_1"></div>
+                        </div>
+                        <!-- 電影時刻 -->
+                        <div class="movie_time movie_time1">
+                            <ul class="movie_time_list movie_time_list1">
+                                <li>2D-英語</li>
+                                <li>10:10</li>
+                                <li>12:40</li>
+                                <li>15:10</li>
+                                <li>17:40</li>
+                                <li>20:10</li>
+                                <li>22:40</li>                            
+                                <li>01:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movebox_2">
+                        <div class="leftdown">
+                            <!-- 電影廳 -->
+                            <div class="movie_living movie_living1_1"></div>
+                            <!-- 電影介紹圖標 -->
+                            <a href="images/Aladdin.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
+                        </div>
+                        <div class="rightdown">
+                            <ul class="movie_time2">
+                                <li>普遍級</li>
+                                <li>片長：128分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie2" class="movie">
+                    <!-- 電影標題 -->
+                    <div class="movie_text movie_text_1">
+                        <!-- 分級ico -->
+                        <img class="Grading_all Grading0plus">
+                        <p id="movie_test2" class="text">五月天人生無限公司<br>Mayday Life</p>
+                    </div>
+                    <div class="movebox_1">
+                        <!-- 電影海報 -->
+                        <div class="movie_img">
+                            <div class="img_all img1_2"></div>
+                        </div>
+                        <!-- 電影時刻 -->
+                        <div class="movie_time movie_time1">
+                            <ul class="movie_time_list movie_time_list1">
+                                <li>3D-國語</li>
+                                <li>10:00</li>
+                                <li>12:20</li>
+                                <li>14:40</li>
+                                <li>17:00</li>
+                                <li>19:20</li>
+                                <li>21:40</li>
+                                <li>00:00</li>                    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movebox_2">
+                        <div class="leftdown">
+                            <!-- 電影廳 -->
+                            <div class="movie_living movie_living1_2"></div>
+                            <!-- 電影介紹圖標 -->
+                            <a href="images/Mayday Life.PNG"  data-lightbox="a2" ><div class="movie_int"></div></a>
+                        </div>
+                        <div class="rightdown">
+                            <ul class="movie_time2">
+                                <li>保護級</li>
+                                <li>片長：181分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie3" class="movie">
+                    <!-- 電影標題 -->
+                    <div class="movie_text movie_text_1">
+                        <!-- 分級ico -->
+                        <img class="Grading_all Grading0plus">
+                        <p id="movie_test3" class="text">阿拉丁<br>Aladdin</p>
+                    </div>
+                    <div class="movebox_1">
+                        <!-- 電影海報 -->
+                        <div class="movie_img">
+                            <div class="img_all img1_1"></div>
+                        </div>
+                        <!-- 電影時刻 -->
+                        <div class="movie_time movie_time1">
+                            <ul class="movie_time_list movie_time_list1">
+                                <li>2D-國語</li>
+                                <li>11:20</li>
+                                <li>13:50</li>
+                                <li>16:20</li>
+                                <li>18:50</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movebox_2">
+                        <div class="leftdown">
+                            <!-- 電影廳 -->
+                            <div class="movie_living movie_living1_3"></div>
+                            <!-- 電影介紹圖標 -->
+                            <a href="images/Aladdin.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
+                        </div>
+                        <div class="rightdown">
+                            <ul class="movie_time2">
+                                <li>普遍級</li>
+                                <li>片長：128分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie4" class="movie">
+                    <!-- 電影標題 -->
+                    <div class="movie_text movie_text_1">
+                        <!-- 分級ico -->
+                        <img class="Grading_all Grading0plus">
+                        <p id="movie_test4" class="text">阿拉丁<br>Aladdin</p>
+                    </div>
+                    <div class="movebox_1">
+                        <!-- 電影海報 -->
+                        <div class="movie_img">
+                            <div class="img_all img1_1"></div>
+                        </div>
+                        <!-- 電影時刻 -->
+                        <div class="movie_time movie_time1">
+                            <ul class="movie_time_list movie_time_list1">
+                                <li>2D-英語</li>
+                                <li>21:20</li>
+                                <li>23:50</li>                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movebox_2">
+                        <div class="leftdown">
+                            <!-- 電影廳 -->
+                            <div class="movie_living movie_living1_3"></div>
+                            <!-- 電影介紹圖標 -->
+                            <a href="images/Aladdin.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
+                        </div>
+                        <div class="rightdown">
+                            <ul class="movie_time2">
+                                <li>普遍級</li>
+                                <li>片長：128分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie5" class="movie">
+                    <!-- 電影標題 -->
+                    <div class="movie_text movie_text_1">
+                        <!-- 分級ico -->
+                        <img class="Grading_all Grading0plus">
+                        <p id="movie_test5" class="text">名偵探皮卡丘<br>Pokemon Detective Pikachu</p>
+                    </div>
+                    <div class="movebox_1">
+                        <!-- 電影海報 -->
+                        <div class="movie_img">
+                            <div class="img_all img1_3"></div>
+                        </div>
+                        <!-- 電影時刻 -->
+                        <div class="movie_time movie_time1">
+                            <ul class="movie_time_list movie_time_list1">
+                                <li>2D-英語</li>
+                                <li>10:00</li>
+                                <li>12:10</li>
+                                <li>14:20</li>
+                                <li>16:30</li>
+                                <li>18:40</li>
+                                <li>20:50</li>
+                                <li>23:00</li>
+                                <li>01:10</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movebox_2">
+                        <div class="leftdown">
+                            <!-- 電影廳 -->
+                            <div class="movie_living movie_living1_5"></div>
+                            <!-- 電影介紹圖標 -->
+                            <a href="images/Pokemon.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
+                        </div>
+                        <div class="rightdown">
+                            <ul class="movie_time2">
+                                <li>普遍級</li>
+                                <li>片長：105分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie6" class="movie">
+                    <!-- 電影標題 -->
+                    <div class="movie_text movie_text_1">
+                        <!-- 分級ico -->
+                        <img class="Grading_all Grading6plus">
+                        <p id="movie_test6" class="text">復仇者聯盟4：終局之戰<br>Avengers:Endgame</p>
+                    </div>
+                    <div class="movebox_1">
+                        <!-- 電影海報 -->
+                        <div class="movie_img">
+                            <div class="img_all img1_4"></div>
+                        </div>
+                        <!-- 電影時刻 -->
+                        <div class="movie_time movie_time1">
+                            <ul class="movie_time_list movie_time_list1">
+                                <li>2D-英語</li>
+                                <li>10:00</li>
+                                <li>15:20</li>
+                                <li>20:40</li>
+                                <li>00:20</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movebox_2">
+                        <div class="leftdown">
+                            <!-- 電影廳 -->
+                            <div class="movie_living movie_living1_6"></div>
+                            <!-- 電影介紹圖標 -->
+                            <a href="images/Avengers4.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
+                        </div>
+                        <div class="rightdown">
+                            <ul class="movie_time2">
+                                <li>保護級</li>
+                                <li>片長：181分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie7" class="movie">
+                    <!-- 電影標題 -->
+                    <div class="movie_text movie_text_1">
+                        <!-- 分級ico -->
+                        <img class="Grading_all Grading0plus">
+                        <p id="movie_test7" class="text">狗狗的旅程<br>A Dog’s Journey</p>
+                    </div>
+                    <div class="movebox_1">
+                        <!-- 電影海報 -->
+                        <div class="movie_img">
+                            <div class="img_all img1_5"></div>
+                        </div>
+                        <!-- 電影時刻 -->
+                        <div class="movie_time movie_time1">
+                            <ul class="movie_time_list movie_time_list1">
+                                <li>2D-英語</li>
+                                <li>13:20</li>
+                                <li>18:40</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movebox_2">
+                        <div class="leftdown">
+                            <!-- 電影廳 -->
+                            <div class="movie_living movie_living1_6"></div>
+                            <!-- 電影介紹圖標 -->
+                            <a href="images/Dog.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
+                        </div>
+                        <div class="rightdown">
+                            <ul class="movie_time2">
+                                <li>普遍級</li>
+                                <li>片長：108分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie8" class="movie">
+                    <!-- 電影標題 -->
+                    <div class="movie_text movie_text_1">
+                        <!-- 分級ico -->
+                        <img class="Grading_all Grading15plus">
+                        <p id="movie_test8" class="text">捍衛任務3：全面開戰<br>Chapter3:Parabellum</p>
+                    </div>
+                    <div class="movebox_1">
+                        <!-- 電影海報 -->
+                        <div class="movie_img">
+                            <div class="img_all img1_6"></div>
+                        </div>
+                        <!-- 電影時刻 -->
+                        <div class="movie_time movie_time1">
+                            <ul class="movie_time_list movie_time_list1">
+                                <li>2D-英語</li>
+                                <li>10:00</li>
+                                <li>12:30</li>
+                                <li>15:00</li>
+                                <li>17:30</li>
+                                <li>20:00</li>
+                                <li>22:30</li>
+                                <li>01:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="movebox_2">
+                        <div class="leftdown">
+                            <!-- 電影廳 -->
+                            <div class="movie_living movie_living1_7"></div>
+                            <!-- 電影介紹圖標 -->
+                            <a href="images/Parabellum.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
                                 <li>輔15歲級</li>
-                                <li>片長：94分</li>
+                                <li>片長：131分</li>
                             </ul>
                         </div>
                     </div>
@@ -867,37 +948,37 @@
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
                         <!-- 分級ico -->
-                        <img class="Grading_all Grading9-2">
-                        <p id="movie_test9" class="text">大冒險家<br>Missing Link</p>
+                        <img class="Grading_all Grading6plus">
+                        <p id="movie_test9" class="text">詐騙女神<br>The Hustle</p>
                     </div>
                     <div class="movebox_1">
                         <!-- 電影海報 -->
                         <div class="movie_img">
-                            <div class="img_all img9-2"></div>
+                            <div class="img_all img1_7"></div>
                         </div>
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-國語</li>
-                                <li>12:00</li>
-                                <li>16:00</li>
-                                <!-- <li>00:30</li> -->
-                                <!-- <li>19:40</li> -->
-                                <!-- <li>23:00</li> -->
+                                <li>2D-英語</li>
+                                <li>10:20</li>
+                                <li>14:00</li>
+                                <li>17:40</li>
+                                <li>21:20</li>
+                                <li>01:00</li>
                             </ul>
                         </div>
                     </div>
                     <div class="movebox_2">
                         <div class="leftdown">
                             <!-- 電影廳 -->
-                            <div class="movie_living movie_living9-2"></div>
+                            <div class="movie_living movie_living1_8"></div>
                             <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
+                            <a href="images/詐騙女神.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：95分</li>
+                                <li>保護級</li>
+                                <li>片長：94分</li>
                             </ul>
                         </div>
                     </div>
@@ -906,51 +987,52 @@
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
                         <!-- 分級ico -->
-                        <img class="Grading_all Grading10-2">
-                        <p id="movie_test9" class="text">禁入墳場<br>Pet Sematary</p>
+                        <img class="Grading_all Grading12plus">
+                        <p id="movie_test9" class="text">城市獵人<br>City Hunter</p>
                     </div>
                     <div class="movebox_1">
                         <!-- 電影海報 -->
                         <div class="movie_img">
-                            <div class="img_all img10-2"></div>
+                            <div class="img_all img1_8"></div>
                         </div>
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>20:00</li>
-                                <li>00:00</li>
-                                <!-- <li>18:00</li> -->
-                                <!-- <li>22:00</li> -->
-                                <!-- <li>23:00</li> -->
+                                <li>2D-法語</li>
+                                <li>12:10</li>
+                                <li>15:50</li>
+                                <li>19:30</li>
+                                <li>23:10</li>
                             </ul>
                         </div>
                     </div>
                     <div class="movebox_2">
                         <div class="leftdown">
                             <!-- 電影廳 -->
-                            <div class="movie_living movie_living10-2"></div>
+                            <div class="movie_living movie_living1_8"></div>
                             <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
+                            <a href="images/City Hunter.PNG"  data-lightbox="a1" ><div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：101分</li>
+                                <li>輔12歲級</li>
+                                <li>片長：91分</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
         <!-- 活動專區 chin_3----------->
         <div id="chin_3" class="chin_3 close">
             <div class="chin3_txt">活動專區</div>
             <div class="chin3_bg"></div>
             <div class="chin3_ad" data-aos="fade-up" data-aos-duration="2000"></div>
         </div>
+          <!-- 活動專區 m_chin4----------->
+          <div id="m_chin4" class="movie_none">
+                <div class="m_chin4_ad "></div>
+            </div>
         <!-------------------------- 電影介紹 chin_4--------------------------  -->
         <script src="js/swiper.js"></script>
 
@@ -982,12 +1064,7 @@
                             <div id="int_img_a4" class="int_img"></div>
                             <div id="int_txt4" class="int_txt">復仇者聯盟4：<br>終局之戰</div>
                         </div>
-                        <!-- <div class="swiper-slide"></div> -->
-                        <!-- <div class="swiper-slide">Slide 6</div> -->
-                        <!-- <div class="swiper-slide">Slide 7</div> -->
-                        <!-- <div class="swiper-slide">Slide 8</div> -->
-                        <!-- <div class="swiper-slide">Slide 9</div> -->
-                        <!-- <div class="swiper-slide">Slide 10</div> -->
+                 
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination "></div>
@@ -995,12 +1072,12 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-                <!-- Swiper JS -->
+            
 
                 <!-- Initialize Swiper -->
                 <script>
                     var swiper = new Swiper('.swiper-container', {
-                        slidesPerView: 3,
+                        slidesPerView: 4,
                         spaceBetween: 0,
                         pagination: {
                             el: '.swiper-pagination',
@@ -1052,7 +1129,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div id="int_img_m8" class="int_img"></div>
-                            <div id="int_txtm8" class="int_txt">阿拉丁- (晚場起)</div>
+                            <div id="int_txtm8" class="int_txt">阿拉丁</div>
                         </div>
                         <div class="swiper-slide">
                             <div id="int_img_m9" class="int_img"></div>
@@ -1062,6 +1139,8 @@
                             <div id="int_img_m10" class="int_img"></div>
                             <div id="int_txtm10" class="int_txt">哥吉拉2:<br>怪獸之王</div>
                         </div>
+                      
+                      
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination "></div>
@@ -1074,8 +1153,8 @@
                 <!-- Initialize Swiper -->
                 <script>
                     var swiper = new Swiper('.swiper-container', {
-                        slidesPerView: 3,
-                        spaceBetween: 0,
+                        slidesPerView: 4,
+                        // spaceBetween: 0,
                         pagination: {
                             el: '.swiper-pagination',
                             
@@ -1127,8 +1206,7 @@
                             <div id="int_img_j8" class="int_img"></div>
                             <div id="int_txtj8" class="int_txt">安娜貝爾回家囉</div>
                         </div>
-                        <!-- <div class="swiper-slide">Slide 9</div> -->
-                        <!-- <div class="swiper-slide">Slide 10</div> -->
+                      
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -1141,8 +1219,8 @@
                 <!-- Initialize Swiper -->
                 <script>
                     var swiper = new Swiper('.swiper-container', {
-                        slidesPerView: 3,
-                        spaceBetween: 0,
+                        slidesPerView: 2,
+                        // spaceBetween: 0,
                         pagination: {
                             el: '.swiper-pagination',
                             
@@ -1156,6 +1234,7 @@
                 </script>
             </div>
         </div>
+   
 
         <!----------------------------關於親親----chin_5------------------------------  -->
         <div id="chin_5" class="chin_5 close">
@@ -1192,6 +1271,39 @@
                 </div>
             </div>
         </div>
+            <!-- 關於親親 m_chin6-----------> 
+            <div id="m_chin6"class=" movie_none">
+                    <div class="m_chin6_txtbox1">
+                        <p class="chin5_txt">親親影城成立於1986年,現有7個國際標準廳院,全球同步首輪影片,
+                            劇場式階梯椅座設計,<br>其中兩廳院擁有最新JBL[三音路主喇叭]音質大大提升.<br>
+                            除了電影院之外 附設B1 湯姆熊 1F哈拉麵包咖啡 2F網咖 <br>
+                            成為附近居民休閒娛樂的重心之一,為北屯住宅商圈帶來繁榮契機
+                        </p>
+                    </div>
+        
+                    <div class="m_chin6_txtbox">
+                        <br>
+                        <p class="chin5_title">1.音質:</p>
+                        <p class="chin5_text">
+                            採用度比7.1環繞音響,SRD.DTS電腦數位音效與JBL最頂級5674劇院級喇叭及CROWN專業級擴大機,
+                            廳院全面採用吸音壁毯,防焰地毯,給予最豪華的環境超水準的感官饗宴
+                        </p>
+                        <br>
+                        <p class="chin5_title">2.螢幕:</p>
+                        <p class="chin5_text">
+                            採用世界最亮,數位放映機"BARCO DP32B"加上超廣角螢幕視野遼闊,
+                            色彩亮度立體感完美呈現,數位3D再升級 最新主動式3D立體眼鏡 ,保證撼動你的視覺
+                        </p>
+                        <br>
+                        <p class="chin5_title">3.座椅:</p>
+                        <p class="chin5_text">
+                            使用[PU麗池座椅],超豪華 747艙座的感受 視野無礙
+                        </p>
+        
+        
+        
+                    </div>
+                </div>
         <!-------------------------- 交通指南 -----chin_6---------------------  -->
         <div id="chin_6" class="chin_6 close">
             <ul id="chin6_text1" class="chin6_left">
@@ -1218,1343 +1330,142 @@
             </div>
 
         </div>
+        <!-- 交通指南 m_chin7----------->
+        <div id="m_chin7" class=" movie_none">
+                <div class="googlemap">
+                    <p class="googlemap_txt">Google Map</p>
+                    <div class="googlemap_link" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14561.305606195949!2d120.6920653!3d24.1602831!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3910bbd1de3dd92!2zQ2hpbiBDaGlu6Kaq6Kaq5oiy6ZmiIC0g5Y-w5Lit6Zu75b2x6Zmi!5e0!3m2!1szh-TW!2stw!4v1557306253328!5m2!1szh-TW!2stw"
+                            width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+    
+                <div  class="m_chin7_bus">
+                    <p class="bus">大 眾 運 輸</p>
+                    <div class="chin6_bus_img" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <img class="chin6_bus_img" src="img/bus-06.png" width="380" height="200" frameborder="0"
+                            style="border:0" allowfullscreen></img>
+                    </div>
+                </div>
+    
+        </div>
         <!---------------- -->
     </div>
    
-    <!--------------------------------------------------------------  -->
-    <!-------------------------- 414px --------------------------  -->
-    <!--------------------------------------------------------------- -->
 
-    <div class="m_chinchin ">
-        <!-- 浮動menu ----------->
-        <nav class="m_chin1">
-            <div class="m_navbar">
-                <div class="m_menu">
-                    <div id="line1" class="line"></div>
-                    <div id="line2" class="line"></div>
-                    <div id="line3" class="line"></div>
-                </div>
-                <div class="m_menu_link m_menu_link_none">
-                    <ul class="m_link_all">
-                        <li id="m_link1" class="m_link"><a class="m_acolor" href="#m_chin_2">場次專區</a>
-                            <div class="m_bg"></div>
-                        </li>
-                        <li id="m_link2" class="m_link"><a class="m_acolor" href="#m_chin_3">活動專區</a>
-                            <div class="m_bg"></div>
-                        </li>
-                        <li id="m_link3" class="m_link"><a class="m_acolor" href="#m_chin_4">電影介紹</a>
-                            <div class="m_bg"></div>
-                        </li>
-                        <li id="m_link4" class="m_link"><a class="m_acolor" href="#m_chin_5">關於親親</a>
-                            <div class="m_bg"></div>
-                        </li>
-                        <li id="m_link5" class="m_link"><a class="m_acolor" href="#m_chin_6">交通指南</a>
-                            <div class="m_bg"></div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="chinLOGO">
-                    <p class="m_chinLOGO">親親影城</p>
-                </div>
-            </div>
-            <script>
-                let menu_ani = document.querySelector('.m_menu')
-                let line1 = document.querySelector('#line1')
-                let line2 = document.querySelector('#line2')
-                let line3 = document.querySelector('#line3')
-                let menu_link = document.querySelector('.m_menu_link_none')
+    
+     <!--------------------lightbox javascript------------------------------------- -->
+    <script src='js/jquery-3.4.0.min.js'></script>
+    <script src='js/lightbox.min.js'></script>
 
-                menu_ani.addEventListener('click', menuHandler)
-
-
-
-                function menuHandler() {
-                    line1.classList.toggle('line1_ani')
-                    line2.classList.toggle('line2_ani')
-                    line3.classList.toggle('line3_ani')
-                    menu_link.classList.toggle('m_menu_link_none')
-                    menu_link.classList.toggle('m_menu_link_block')
-                }
-
-            </script>
-        </nav>
-        <!--  空白下推部分 m_hoot----------->
-        <div class="m_hoot"></div>
-        <!--  標題 m_chin2----------->
-        <div class="m_chin2 ">
-            <div class="m_chin2_vip"></div>
-        </div>
-        <!--  票價 m_chin0----------->
-        <div class="m_chin0">
-            <div class="m_ticket">
-                <h1 class="ticket_h1">電影票價</h1>
-                <ul class="ticket_ul1">
-                    <li id="ticket_li0" class="ticket_li">
-                        <span class="h2d diu">2D</span><span class="h3d diu">3D</span>
-                    </li>
-                    <li id="ticket_li1" class="ticket_li">
-                        <span class="diu_li">全票</span><span class="diu_li_m">210元</span><span
-                            class="diu_li_m">300元</span>
-                        <p class="ticket_li_txt">一般成人</p>
-                    </li>
-                    <li id="ticket_li2" class="ticket_li">
-                        <span class="diu_li">半票</span><span class="diu_li_m">190元</span><span
-                            class="diu_li_m">280元</span>
-                        <p class="ticket_li_txt">早場、晚場、學生、軍警。須出示證件。</p>
-                    </li>
-                    <li id="ticket_li3" class="ticket_li">
-                        <span class="diu_li">會員票</span><span class="diu_li_m">190元</span><span
-                            class="diu_li_m">280元</span>
-                        <p class="ticket_li_txt">須出示會員卡。</p>
-                    </li>
-                    <li id="ticket_li4" class="ticket_li">
-                        <span class="diu_li">兒童票</span><span class="diu_li_m">190元</span><span
-                            class="diu_li_m">280元</span>
-                        <p class="ticket_li_txt">滿6歲以上~未滿12歲之兒童。須出示證件。</p>
-                    </li>
-                    <li id="ticket_li5" class="ticket_li">
-                        <span class="diu_li">愛心票</span><span class="diu_li_m">190元</span><span
-                            class="diu_li_m">280元</span>
-                        <p id="ticket_li5_txt" class="ticket_li_txt">持有身心障礙手冊(陪同僅限一位)、年滿65歲以上長者，購票及入場須出示證件，限本人使用。<br>
-                            滿2歲以上~未滿6歲之兒童，限觀賞普遍級電影。須出示證件。</p>
-
-                    </li>
-                </ul>
-                <ul class="ticket_ul2">
-                    <li class="ticket_li2_txt">持優待票觀賞3D影片須補80元、持招待票觀賞3D影片須補150元。</li>
-                    <li class="ticket_li2_txt">2D或3D影片，未滿2歲且不占位之兒童無須購票可免費入場觀賞普遍級影片，每位兒童至少需由至少一位已購票之成人陪伴。</li>
-                    <li class="ticket_li2_vip">申辦會員卡立即享有會員優惠</li>
-                </ul>
-                <ul class="ticket_ul3">
-                    <li class="ticket_li3_txt">憑會員卡現金購票 3D版 $280元、2D版 $190元。</li>
-                    <li id="ticket_li3_txt2" class="ticket_li3_txt">免費贈送 爆米花+飲料 兌換券</li>
-                </ul>
-                <ul class="ticket_ul4">
-                    <li class="ticket_li4_txt">申辦會員卡期限兩年、酌收工本費100元、舊卡換新卡工本費50元、請至親親影城一樓票房現場申請辦理。
-                        <br> 持親親影城會員卡至一樓哈拉烘焙消費可享95折優惠。
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--  電影內容 m_chin3----------->
-        <div class="m_chin3 m_movie_none">
-            <div id="m_chin3_topbox" class="m_chin3_topbox">
-                <div id="m_chin3_text1" class="chin3_text movietxtcolor">
-                    <a class="chin3_font" href="javascript:void(0);">5月6日(一)~5月8日(三)</a>
-                </div>
-                <div id="m_chin3_text2" class="chin3_text">
-                    <a class="chin3_font" href="javascript:void(0);">5月9日(四)~5月11日(六)</a>
-                </div>
-            </div>
-<!--  電影內容 m_movie_all1----------->
-            <div class="m_movie_all1 ">
-                <div id="movie1" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading1-1">
-                        <p id="movie_test1-1" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img1-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>09:40</li>
-                                <li>13:00</li>
-                                <li>16:20</li>
-                                <li>19:40</li>
-                                <li>23:00</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living1-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie2" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading2-1">
-                        <p id="movie_test2" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img2-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>11:20</li>
-                                <li>14:40</li>
-                                <li>18:00</li>
-                                <li>21:20</li>
-                                <li>00:40</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living2-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie3" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading3-1">
-                        <p id="movie_test3" class="text">地獄怪客：血后的崛起<br>Hellboy: Rise of the Blood Queen</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img3-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:20</li>
-                                <!-- <li>13:00</li> -->
-                                <!-- <li>16:20</li> -->
-                                <!-- <li>19:40</li> -->
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living3-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：121分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie4" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading4-1">
-                        <p id="movie_test4" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img4-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>12:40</li>
-                                <li>16:00</li>
-                                <li>19:20</li>
-                                <li>22:40</li>
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living4-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie5" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading5-1">
-                        <p id="movie_test5" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img5-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:40</li>
-                                <li>14:00</li>
-                                <li>17:20</li>
-                                <li>20:40</li>
-                                <li>00:00</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living5-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie6" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading6-1">
-                        <p id="movie_test6" class="text">禁入墳場<br>Pet Sematary</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img6-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:00</li>
-                                <!-- <li>13:00</li> -->
-                                <!-- <li>16:20</li> -->
-                                <!-- <li>19:40</li> -->
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living6-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：101分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie7" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading7-1">
-                        <p id="movie_test7" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img7-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>12:00</li>
-                                <li>15:20</li>
-                                <li>18:40</li>
-                                <li>22:00</li>
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living7-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie8" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading8-1">
-                        <p id="movie_test8" class="text">哭泣的女人<br>The Curse of La Llorona</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img8-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:30</li>
-                                <li>14:30</li>
-                                <li>16:30</li>
-                                <li>20:30</li>
-                                <li>22:30</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living8-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：94分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie9" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading9-1">
-                        <p id="movie_test9" class="text">禁入墳場<br>Pet Sematary</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img9-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>12:30</li>
-                                <li>18:30</li>
-                                <li>00:30</li>
-                                <!-- <li>19:40</li> -->
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living9-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：101分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie10" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading10-1">
-                        <p id="movie_test9" class="text">大冒險家<br>Missing Link</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img10-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-國語</li>
-                                <li>10:00</li>
-                                <li>14:00</li>
-                                <li>18:00</li>
-                                <li>22:00</li>
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living10-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：95分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie11" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading11-1">
-                        <p id="movie_test9" class="text">大冒險家<br>Missing Link</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img11-1"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>12:00</li>
-                                <li>16:00</li>
-                                <li>20:00</li>
-                                <li>00:00</li>
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living11-1"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：95分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--  電影內容 m_movie_all2----------->
-            <div class="m_movie_all2 m_movie_none">
-                <div id="movie1" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading1-2">
-                        <p id="movie_test1-1" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img1-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>09:40</li>
-                                <li>13:00</li>
-                                <li>16:20</li>
-                                <li>19:40</li>
-                                <li>23:00</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living1-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie2" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading2-2">
-                        <p id="movie_test2" class="text">名偵探皮卡丘 <br>Pokemon Detective Pikachu</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img2-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:00</li>
-                                <li>12:10</li>
-                                <li>14:20</li>
-                                <li>16:30</li>
-                                <li>18:40</li>
-                                <li>20:50</li>
-                                <li>23:00</li>
-                                <li>01:10</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living2-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：105分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie3" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading3-2">
-                        <p id="movie_test3" class="text">名偵探皮卡丘<br>Pokemon Detective Pikachu</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img3-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>11:00</li>
-                                <li>13:10</li>
-                                <li>15:20</li>
-                                <li>19:40</li>
-                                <li>21:50</li>
-                                <li>00:00</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living3-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：105分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie4" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading4-2">
-                        <p id="movie_test4" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img4-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>11:20</li>
-                                <li>14:40</li>
-                                <li>18:00</li>
-                                <li>21:20</li>
-                                <li>00:40</li>
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living4-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie5" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading5-2">
-                        <p id="movie_test5" class="text">大冒險家<br>Missing Link</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img5-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-國語</li>
-                                <li>10:20</li>
-                                <!-- <li>14:00</li> -->
-                                <!-- <li>17:20</li> -->
-                                <!-- <li>20:40</li> -->
-                                <!-- <li>00:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living5-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：95分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie6" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading6-2">
-                        <p id="movie_test6" class="text">復仇者聯盟4：終局之戰<br>Avengers: Endgame</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img6-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>12:30</li>
-                                <li>15:50</li>
-                                <li>19:10</li>
-                                <li>22:30</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living6-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：181分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie7" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading7-2">
-                        <p id="movie_test7" class="text">詐騙女神<br>The Hustle</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img7-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:30</li>
-                                <li>12:30</li>
-                                <li>14:30</li>
-                                <li>16:30</li>
-                                <li>18:30</li>
-                                <li>20:30</li>
-                                <li>22:30</li>
-                                <li>00:30</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living7-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>保護級</li>
-                                <li>片長：94分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie8" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading8-2">
-                        <p id="movie_test8" class="text">哭泣的女人<br>The Curse of La Llorona</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img8-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:00</li>
-                                <li>14:00</li>
-                                <li>18:00</li>
-                                <li>22:00</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living8-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：94分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie9" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading9-2">
-                        <p id="movie_test9" class="text">大冒險家<br>Missing Link</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img9-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-國語</li>
-                                <li>12:00</li>
-                                <li>16:00</li>
-                                <!-- <li>00:30</li> -->
-                                <!-- <li>19:40</li> -->
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living9-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>普遍級</li>
-                                <li>片長：95分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="movie10" class="movie">
-                    <!-- 電影標題 -->
-                    <div class="movie_text movie_text_1">
-                        <!-- 分級ico -->
-                        <img class="Grading_all Grading10-2">
-                        <p id="movie_test9" class="text">禁入墳場<br>Pet Sematary</p>
-                    </div>
-                    <div class="movebox_1">
-                        <!-- 電影海報 -->
-                        <div class="movie_img">
-                            <div class="img_all img10-2"></div>
-                        </div>
-                        <!-- 電影時刻 -->
-                        <div class="movie_time movie_time1">
-                            <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>20:00</li>
-                                <li>00:00</li>
-                                <!-- <li>18:00</li> -->
-                                <!-- <li>22:00</li> -->
-                                <!-- <li>23:00</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="movebox_2">
-                        <div class="leftdown">
-                            <!-- 電影廳 -->
-                            <div class="movie_living movie_living10-2"></div>
-                            <!-- 電影介紹圖標 -->
-                            <div class="movie_int"></div>
-                        </div>
-                        <div class="rightdown">
-                            <ul class="movie_time2">
-                                <li>輔15歲級</li>
-                                <li>片長：101分</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-<!--  電影內容 m_movie_all3----------->
-
-
-
-            <!-- 場次專區 Script-->
-            <script>
-                var m_chin2_dis1 = document.querySelector('#m_chin3_text1')
-                var m_chin2_dis2 = document.querySelector('#m_chin3_text2')
-                var m_movie_all1 = document.querySelector('.m_movie_all1')
-                var m_movie_all2 = document.querySelector('.m_movie_all2')
-                var color = document.querySelector('.movietxtcolor')
-
-                m_chin2_dis1.addEventListener('click', dis1Hendler)
-                m_chin2_dis2.addEventListener('click', dis2Hendler)
-
-                function dis1Hendler() {
-                if (m_movie_all1.classList.display = 'm_movie_none') {
-                    m_movie_all1.classList.remove('m_movie_none')
-                    m_movie_all2.classList.add('m_movie_none')
-                    m_chin2_dis1.classList.add('movietxtcolor')
-                    m_chin2_dis2.classList.remove('movietxtcolor')                  
-                }
-            }
-            function dis2Hendler() {
-                if (m_movie_all2.classList.display = 'm_movie_none') {
-                    m_movie_all2.classList.remove('m_movie_none')
-                    m_movie_all1.classList.add('m_movie_none')
-                    m_chin2_dis1.classList.remove('movietxtcolor')
-                    m_chin2_dis2.classList.add('movietxtcolor')
-                }
-            }
-            </script>
-
-        </div>
-        <!-- 活動專區 m_chin4----------->
-        <div class="m_chin4 m_movie_none">
-            <div class="m_chin4_ad "></div>
-        </div>
-        <!-- 電影介紹 m_chin5----------->
-        <div id="m_chin5 " class="m_chin5 m_movie_none">
-
-            <div id="April" class="introduction">
-                <div class="month">
-                    <P>四月</P>
-                </div>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div id="int_img_a1" class="int_img"></div>
-                            <!-- <div id="int_txt1" class="int_txt">地獄怪客：<br>血后的崛起</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_a2" class="int_img"></div>
-                            <!-- <div id="int_txt2" class="int_txt">禁入墳場</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_a3" class="int_img"></div>
-                            <!-- <div id="int_txt3" class="int_txt">哭泣的女人</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_a4" class="int_img"></div>
-                            <!-- <div id="int_txt4" class="int_txt">復仇者聯盟4：<br>終局之戰</div> -->
-                        </div>
-                        <!-- <div class="swiper-slide"></div> -->
-                        <!-- <div class="swiper-slide">Slide 6</div> -->
-                        <!-- <div class="swiper-slide">Slide 7</div> -->
-                        <!-- <div class="swiper-slide">Slide 8</div> -->
-                        <!-- <div class="swiper-slide">Slide 9</div> -->
-                        <!-- <div class="swiper-slide">Slide 10</div> -->
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Add Arrows -->
-                    <!-- <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div> -->
-                </div>
-                <!-- Swiper JS -->
-
-                <!-- Initialize Swiper -->
-                <script>
-                    var swiper = new Swiper('.swiper-container', {
-                        slidesPerView: 3,
-                        spaceBetween: 0,
-                        pagination: {
-                            el: '.swiper-pagination',
-                           
-                            clickable: true,
-                        },
-                        // navigation: {
-                        //     nextEl: '.swiper-button-next',
-                        //     prevEl: '.swiper-button-prev',
-                        // },
-                    });
-                </script>
-
-            </div>
-
-            <div id="May" class="introduction">
-                <div class="month">
-                    <P>五月</P>
-                </div>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div id="int_img_m1" class="int_img"></div>
-                            <!-- <div id="int_txtm1" class="int_txt">大冒險家</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_m2" class="int_img"></div>
-                            <!-- <div id="int_txtm2" class="int_txt">詐騙女神</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_m3" class="int_img"></div>
-                            <!-- <div id="int_txtm3" class="int_txt">名偵探皮卡丘</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_m4" class="int_img"></div>
-                            <!-- <div id="int_txtm4" class="int_txt">捍衛任務3：<br>全面開戰</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_m5" class="int_img"></div>
-                            <!-- <div id="int_txtm5" class="int_txt">狗狗的旅程</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_m6" class="int_img"></div>
-                            <!-- <div id="int_txtm6" class="int_txt">樂獄</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_m7" class="int_img"></div>
-                            <!-- <div id="int_txtm7" class="int_txt">醜娃娃大冒險</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_m8" class="int_img"></div>
-                            <!-- <div id="int_txtm8" class="int_txt">阿拉丁- (晚場起)</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_m9" class="int_img"></div>
-                            <!-- <div id="int_txtm9" class="int_txt">城市獵人</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_m10" class="int_img"></div>
-                            <!-- <div id="int_txtm10" class="int_txt">哥吉拉2:<br>怪獸之王</div> -->
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination pagination2"></div>
-                    <!-- Add Arrows -->
-                    <!-- <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div> -->
-                </div>
-                <!-- Swiper JS -->
-
-                <!-- Initialize Swiper -->
-                <script>
-                    var swiper = new Swiper('.swiper-container', {
-                        slidesPerView: 3,
-                        spaceBetween: 0,
-                        pagination: {
-                            el: '.swiper-pagination',
-                           
-                            clickable: true,
-                        },
-                        // navigation: {
-                        //     nextEl: '.swiper-button-next',
-                        //     prevEl: '.swiper-button-prev',
-                        // },
-                    });
-                </script>
-            </div>
-
-            <div id="June" class="introduction">
-                <div class="month">
-                    <P>六月</P>
-                </div>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div id="int_img_j1" class="int_img"></div>
-                            <!-- <div id="int_txtj1" class="int_txt">X戰警:黑鳳凰</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_j2" class="int_img"></div>
-                            <!-- <div id="int_txtj2" class="int_txt">寵物當家2</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_j3" class="int_img"></div>
-                            <!-- <div id="int_txtj3" class="int_txt">MIB星際戰警:<br>跨國行動</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_j4" class="int_img"></div>
-                            <!-- <div id="int_txtj4" class="int_txt">火箭人</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_j5" class="int_img"></div>
-                            <!-- <div id="int_txtj5" class="int_txt">玩具總動員4</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_j6" class="int_img"></div>
-                            <!-- <div id="int_txtj6" class="int_txt">安娜</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_j7" class="int_img"></div>
-                            <!-- <div id="int_txtj7" class="int_txt">靠譜歌王</div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="int_img_j8" class="int_img"></div>
-                            <!-- <div id="int_txtj8" class="int_txt">安娜貝爾回家囉</div> -->
-                        </div>
-                        <!-- <div class="swiper-slide">Slide 9</div> -->
-                        <!-- <div class="swiper-slide">Slide 10</div> -->
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination "></div>
-                    <!-- Add Arrows -->
-                    <!-- <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div> -->
-                </div>
-                <!-- Swiper JS -->
-
-                <!-- Initialize Swiper -->
-                <script>
-                    var swiper = new Swiper('.swiper-container', {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                        pagination: {
-                            el: '.swiper-pagination',
-                           
-                            clickable: true,
-                        },
-                        // navigation: {
-                        //     nextEl: '.swiper-button-next',
-                        //     prevEl: '.swiper-button-prev',
-                        // },
-                    });
-                </script>
-            </div>
-
-
-        </div>
-        <!-- 關於親親 m_chin6-----------> 
-        <div class="m_chin6 m_movie_none">
-            <div class="m_chin6_txtbox1">
-                <p class="chin5_txt">親親影城成立於1986年,現有7個國際標準廳院,全球同步首輪影片,
-                    劇場式階梯椅座設計,<br>其中兩廳院擁有最新JBL[三音路主喇叭]音質大大提升.<br>
-                    除了電影院之外 附設B1 湯姆熊 1F哈拉麵包咖啡 2F網咖 <br>
-                    成為附近居民休閒娛樂的重心之一,為北屯住宅商圈帶來繁榮契機
-                </p>
-            </div>
-
-            <div class="m_chin6_txtbox">
-                <br>
-                <p class="chin5_title">1.音質:</p>
-                <p class="chin5_text">
-                    採用度比7.1環繞音響,SRD.DTS電腦數位音效與JBL最頂級5674劇院級喇叭及CROWN專業級擴大機,
-                    廳院全面採用吸音壁毯,防焰地毯,給予最豪華的環境超水準的感官饗宴
-                </p>
-                <br>
-                <p class="chin5_title">2.螢幕:</p>
-                <p class="chin5_text">
-                    採用世界最亮,數位放映機"BARCO DP32B"加上超廣角螢幕視野遼闊,
-                    色彩亮度立體感完美呈現,數位3D再升級 最新主動式3D立體眼鏡 ,保證撼動你的視覺
-                </p>
-                <br>
-                <p class="chin5_title">3.座椅:</p>
-                <p class="chin5_text">
-                    使用[PU麗池座椅],超豪華 747艙座的感受 視野無礙
-                </p>
-
-
-
-            </div>
-        </div>
-        <!-- 交通指南 m_chin7----------->
-        <div id="m_chin7" class="m_chin7 m_movie_none">
-            <div class="googlemap">
-                <p class="googlemap_txt">Google Map</p>
-                <div class="googlemap_link" data-aos="flip-left" data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14561.305606195949!2d120.6920653!3d24.1602831!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3910bbd1de3dd92!2zQ2hpbiBDaGlu6Kaq6Kaq5oiy6ZmiIC0g5Y-w5Lit6Zu75b2x6Zmi!5e0!3m2!1szh-TW!2stw!4v1557306253328!5m2!1szh-TW!2stw"
-                        width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="m_chin7_bus">
-                <p class="bus">大 眾 運 輸</p>
-                <div class="chin6_bus_img" data-aos="flip-right" data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000">
-                    <img class="chin6_bus_img" src="img/bus-06.png" width="380" height="200" frameborder="0"
-                        style="border:0" allowfullscreen></img>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-
-    <!--------------------------aos javascript------------------------------------- -->
+    <script>
+        lightbox.option({
+          'resizeDuration': 200,
+          'showImageNumberLabel': false,
+          'maxWidth':600,
+        })
+    </script>
+    <!---------aos javascript------------------------------------- -->
      <script src="js/aos.js"></script>
-
      <script>
          AOS.init();
      </script>
-    <!-- 切換 javascript---------------------------------------------->
+    <!-- 切換 molie menu javascript---------------------------------------------->
     <script>
+        var m_link0 = document.querySelector('.m_chinLOGO')
         var m_link1 = document.querySelector('#m_link1')
         var m_link2 = document.querySelector('#m_link2')
         var m_link3 = document.querySelector('#m_link3')
         var m_link4 = document.querySelector('#m_link4')
         var m_link5 = document.querySelector('#m_link5')
-        var m_link0 = document.querySelector('.m_chinLOGO')
-
-        var m_chin3 = document.querySelector('.m_chin3')
-        var m_chin4 = document.querySelector('.m_chin4')
-        var m_chin5 = document.querySelector('.m_chin5')
-        var m_chin6 = document.querySelector('.m_chin6')
-        var m_chin7 = document.querySelector('.m_chin7')
-        var m_chin0 = document.querySelector('.m_chin0')
-
-        m_link1.addEventListener('click', chin3Hendler)
-        m_link2.addEventListener('click', chin4Hendler)
-        m_link3.addEventListener('click', chin5Hendler)
-        m_link4.addEventListener('click', chin6Hendler)
-        m_link5.addEventListener('click', chin7Hendler)
+        
+        var m_chin0 = document.querySelector('#m_chin0')/*票價*/
+        var m_chin1 = document.querySelector('#m_chin1')/*banner*/
+        var m_chin2 = document.querySelector('#m_chin2')/*vip*/
+        var m_hoot = document.querySelector('#m_hoot')/*空*/
+        var chin2 = document.querySelector('#chin_2')/*場次*/
+        var m_chin3 = document.querySelector('#m_chin3')/*標題選擇*/
+        var m_chin4 = document.querySelector('#m_chin4')/*活動專區*/
+        var m_chin5 = document.querySelector('#chin_4')/*電影介紹*/
+        var m_chin6 = document.querySelector('#m_chin6')/*關於親親*/
+        var m_chin7 = document.querySelector('#m_chin7')/*交通*/
+        
         m_link0.addEventListener('click', chin0Hendler)
+        m_link1.addEventListener('click', chin1Hendler)
+        m_link2.addEventListener('click', chin2Hendler)
+        m_link3.addEventListener('click', chin3Hendler)
+        m_link4.addEventListener('click', chin4Hendler)
+        m_link5.addEventListener('click', chin5Hendler)
+        
+        if(document.documentElement.clientWidth >= 375&&document.documentElement.clientWidth <= 415){
+            m_chin0.classList.remove('movie_none')
+            m_chin1.classList.remove('movie_none')
+            m_chin2.classList.remove('movie_none')
+            m_chin5.classList.add('movie_none')
+            chin2.classList.add('movie_none')
 
+        }
+       
+
+        function chin0Hendler() {
+            m_chin0.classList.remove('movie_none')
+            m_chin7.classList.add('movie_none')
+            m_chin6.classList.add('movie_none')
+            m_chin5.classList.add('movie_none')
+            m_chin4.classList.add('movie_none')
+            m_chin3.classList.add('movie_none')
+            chin2.classList.add('movie_none')
+        }
+        function chin1Hendler() {
+            m_chin0.classList.add('movie_none')
+            chin2.classList.remove('movie_none')
+            m_chin3.classList.remove('movie_none')
+            m_chin4.classList.add('movie_none')
+            m_chin5.classList.add('movie_none')
+            m_chin6.classList.add('movie_none')
+            m_chin7.classList.add('movie_none')
+            
+        }
+        function chin2Hendler() {
+            m_chin7.classList.add('movie_none')
+            m_chin6.classList.add('movie_none')
+            m_chin5.classList.add('movie_none')
+            m_chin4.classList.remove('movie_none')
+            m_chin3.classList.add('movie_none')
+            chin2.classList.add('movie_none')
+            m_chin0.classList.add('movie_none')
+        }
         function chin3Hendler() {
-            m_chin7.classList.add('m_movie_none')
-            m_chin3.classList.remove('m_movie_none')
-            m_chin4.classList.add('m_movie_none')
-            m_chin5.classList.add('m_movie_none')
-            m_chin6.classList.add('m_movie_none')
-            m_chin0.classList.add('m_movie_none')
+            m_chin7.classList.add('movie_none')
+            m_chin6.classList.add('movie_none')
+            m_chin5.classList.remove('movie_none')
+            m_chin4.classList.add('movie_none')
+            m_chin3.classList.add('movie_none')
+            chin2.classList.add('movie_none')
+            m_chin0.classList.add('movie_none')
         }
         function chin4Hendler() {
-            m_chin7.classList.add('m_movie_none')
-            m_chin6.classList.add('m_movie_none')
-            m_chin5.classList.add('m_movie_none')
-            m_chin4.classList.remove('m_movie_none')
-            m_chin3.classList.add('m_movie_none')
-            m_chin0.classList.add('m_movie_none')
+            m_chin7.classList.add('movie_none')
+            m_chin6.classList.remove('movie_none')
+            m_chin5.classList.add('movie_none')
+            m_chin4.classList.add('movie_none')
+            m_chin3.classList.add('movie_none')
+            chin2.classList.add('movie_none')
+            m_chin0.classList.add('movie_none')
         }
         function chin5Hendler() {
-            m_chin7.classList.add('m_movie_none')
-            m_chin6.classList.add('m_movie_none')
-            m_chin5.classList.remove('m_movie_none')
-            m_chin4.classList.add('m_movie_none')
-            m_chin3.classList.add('m_movie_none')
-            m_chin0.classList.add('m_movie_none')
+            m_chin7.classList.remove('movie_none')
+            m_chin6.classList.add('movie_none')
+            m_chin5.classList.add('movie_none')
+            m_chin4.classList.add('movie_none')
+            m_chin3.classList.add('movie_none')
+            chin2.classList.add('movie_none')
+            m_chin0.classList.add('movie_none')
         }
-        function chin6Hendler() {
-            m_chin7.classList.add('m_movie_none')
-            m_chin6.classList.remove('m_movie_none')
-            m_chin5.classList.add('m_movie_none')
-            m_chin4.classList.add('m_movie_none')
-            m_chin3.classList.add('m_movie_none')
-            m_chin0.classList.add('m_movie_none')
-        }
-        function chin7Hendler() {
-            m_chin7.classList.remove('m_movie_none')
-            m_chin6.classList.add('m_movie_none')
-            m_chin5.classList.add('m_movie_none')
-            m_chin4.classList.add('m_movie_none')
-            m_chin3.classList.add('m_movie_none')
-            m_chin0.classList.add('m_movie_none')
-        }
-        function chin0Hendler() {
-            m_chin0.classList.remove('m_movie_none')
-            m_chin7.classList.add('m_movie_none')
-            m_chin6.classList.add('m_movie_none')
-            m_chin5.classList.add('m_movie_none')
-            m_chin4.classList.add('m_movie_none')
-            m_chin3.classList.add('m_movie_none')
-        }
+      
 
        </script>
     <!-- 浮動下拉關閉   javascript----------->
@@ -2577,7 +1488,6 @@
 
     if(document.documentElement.clientWidth >= 415&&document.documentElement.clientWidth <= 768){   
 
-        console.log(document.documentElement.clientWidth)
 
         chin1.forEach(function(closelist) {
     
@@ -2585,16 +1495,44 @@
             function  closelistHandler(){
                 if(link_all.style.display == 'block'){
                     link_all.style.display = 'none'
-                    console.log('y')
+    
                 }else{
                     link_all.style.display = 'none'   
-                    console.log('n')
+
                 }
             }
     })
 }
      </script> 
+     <!-- 場次專區 mobile Script-->
+     <script>
+        var m_chin2_dis1 = document.querySelector('#m_chin3_text1')
+        var m_chin2_dis2 = document.querySelector('#m_chin3_text2')
+        var m_movie_all1 = document.querySelector('.movie_all1')
+        var m_movie_all2 = document.querySelector('.movie_all2')
+        var color = document.querySelector('.movietxtcolor')
 
+        m_chin2_dis1.addEventListener('click', dis1Hendler)
+        m_chin2_dis2.addEventListener('click', dis2Hendler)
+
+        function dis1Hendler() {
+        if (m_movie_all1.classList.display = 'movie_none') {
+            console.log('t')
+            m_movie_all1.classList.remove('movie_none')
+            m_movie_all2.classList.add('movie_none')
+            m_chin2_dis1.classList.add('movietxtcolor')
+            m_chin2_dis2.classList.remove('movietxtcolor')                  
+        }
+    }
+    function dis2Hendler() {
+        if (m_movie_all2.classList.display = 'movie_none') {
+            m_movie_all2.classList.remove('movie_none')
+            m_movie_all1.classList.add('movie_none')
+            m_chin2_dis1.classList.remove('movietxtcolor')
+            m_chin2_dis2.classList.add('movietxtcolor')
+        }
+    }
+       </script>
     <!-- facebook halalogo scroll javascript ----------->
     <script>
     var totop = document.querySelector('.totop')
@@ -2612,7 +1550,7 @@
         }
     }
     function scroll2() {
-        if (document.documentElement.scrollTop >= 3500) {
+        if (document.documentElement.scrollTop >= 2000) {
             facebook.classList.add('movie_none')
             halalogo.classList.add('movie_none')
         } else {
@@ -2651,6 +1589,7 @@
                     }
                 }
        </script>
+
 </body>
 
 </html>
