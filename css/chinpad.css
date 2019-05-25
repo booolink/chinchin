@@ -489,22 +489,22 @@
   }
   .introduction {
     box-shadow: 5px 3px 8px 5px black;
-    margin-bottom: 1300px;
+    /* margin-bottom: 1300px; */
   }
   .swiper-slide {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .int_img{
-    width: 90px;
-    height: 120px;
-    margin: 0;
+    width: 80px;
+    height: 110px;
+    margin: 10px 0px 0px 20px;
   }
   .int_txt{
     width: 100px;
  
    }
   .swiper-slide{
-    width: 190px !important
+    width: 200px !important
   }
   #April {
     width: 100%;
