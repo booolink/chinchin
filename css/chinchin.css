@@ -428,7 +428,7 @@ a{
 }
 
 .movie_none{
-    display: none !important
+    display: none !important;
 }
 .movietxtcolor{
     background-color: #f54b17;
