@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <div id="chinchin" class="chinchin">
           <!-- pc 浮動menu ----------->
           <div class="menu">
@@ -216,21 +217,21 @@
       
         <!--  PC 標題切換 chin_2----------->
         <div id="chin2_topbox" class="chin2_topbox close">
-            <!-- <div id="chin2_text1" class="chin2_text movietxtcolor">
-                <a href="javascript:void(0);">5月24日(五)~5月24日(五)</a>
-            </div> -->
-            <div id="chin2_text2" class="chin2_text">
+            <div id="chin2_text1" class="chin2_text movietxtcolor">
                 <a href="javascript:void(0);">5月25日(六)~5月28日(二)</a>
             </div>
+            <!-- <div id="chin2_text2" class="chin2_text">
+                <a href="javascript:void(0);">5月25日(六)~5月28日(二)</a>
+            </div> -->
         </div>
         <!--  moblie 切換標題 m_chin3----------->
         <div id="m_chin3" class="m_chin3_topbox movie_none">
-                    <!-- <div id="m_chin3_text1" class="chin3_text movietxtcolor">
-                        <a class="chin3_font" href="javascript:void(0);">5月24日(五)~5月24日(五)</a>
-                   </div> -->
-                    <div id="m_chin3_text2" class="chin3_text">
-                      <a class="chin3_font" href="javascript:void(0);">5月25日(六)~5月28日(二)</a>
+                    <div id="m_chin3_text1" class="chin3_text movietxtcolor">
+                        <a class="chin3_font" href="javascript:void(0);">5月25日(六)~5月28日(二)</a>
                    </div>
+                    <!-- <div id="m_chin3_text2" class="chin3_text">
+                      <a class="chin3_font" href="javascript:void(0);">5月25日(六)~5月28日(二)</a>
+                   </div> -->
         </div>
         <!--  場次專區 chin_2----------->
         <div id="chin_2" class="chin_2 close">
@@ -659,7 +660,7 @@
                 </div>
             </div>
              <!--  電影內容 movie_all2----------->
-             <div class="movie_all2 movie_none">
+             <div id="movie_all2" class="movie_all2 movie_none">
                 <div id="movie1" class="movie">
                     <!-- 電影標題 -->
                     <div class="movie_text movie_text_1">
@@ -675,14 +676,15 @@
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:10</li>
-                                <li>12:40</li>
-                                <li>15:10</li>
-                                <li>17:40</li>
-                                <li>20:10</li>
-                                <li>22:40</li>                            
-                                <li>01:00</li>
+                                <li>{{ menu[index].chang }}</li>
+                                <li>{{ menu[index].time1 }}</li>
+                                <li>{{ menu[index].time2 }}</li>
+                                <li>{{ menu[index].time3 }}</li>
+                                <li>{{ menu[index].time4 }}</li>
+                                <li>{{ menu[index].time5 }}</li>
+                                <li>{{ menu[index].time6 }}</li>                            
+                                <li>{{ menu[index].time7 }}</li>
+                                <li>{{ menu[index].time8 }}</li>
                             </ul>
                         </div>
                     </div>
@@ -716,14 +718,15 @@
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>3D-國語</li>
-                                <li>10:00</li>
-                                <li>12:20</li>
-                                <li>14:40</li>
-                                <li>17:00</li>
-                                <li>19:20</li>
-                                <li>21:40</li>
-                                <li>00:00</li>                    
+                                <li>{{ menu[index+1].chang }}</li>
+                                <li>{{ menu[index+1].time1 }}</li>
+                                <li>{{ menu[index+1].time2 }}</li>
+                                <li>{{ menu[index+1].time3 }}</li>
+                                <li>{{ menu[index+1].time4 }}</li>
+                                <li>{{ menu[index+1].time5 }}</li>
+                                <li>{{ menu[index+1].time6 }}</li>                            
+                                <li>{{ menu[index+1].time7 }}</li>
+                                <li>{{ menu[index+1].time8 }}</li>                  
                             </ul>
                         </div>
                     </div>
@@ -732,7 +735,7 @@
                             <!-- 電影廳 -->
                             <div class="movie_living movie_living1_2"></div>
                             <!-- 電影介紹圖標 -->
-                            <a href="images/Mayday Life.PNG"  data-lightbox="a2" ><div class="movie_int"></div></a>
+                            <a href="images/Mayday Life.PNG"  data-lightbox="a2" > <div class="movie_int"></div></a>
                         </div>
                         <div class="rightdown">
                             <ul class="movie_time2">
@@ -757,11 +760,15 @@
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-國語</li>
-                                <li>11:20</li>
-                                <li>13:50</li>
-                                <li>16:20</li>
-                                <li>18:50</li>
+                                <li>{{ menu[index+2].chang }}</li>
+                                <li>{{ menu[index+2].time1 }}</li>
+                                <li>{{ menu[index+2].time2 }}</li>
+                                <li>{{ menu[index+2].time3 }}</li>
+                                <li>{{ menu[index+2].time4 }}</li>
+                                <li>{{ menu[index+2].time5 }}</li>
+                                <li>{{ menu[index+2].time6 }}</li>                            
+                                <li>{{ menu[index+2].time7 }}</li>
+                                <li>{{ menu[index+2].time8 }}</li>
                             </ul>
                         </div>
                     </div>
@@ -795,9 +802,15 @@
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>21:20</li>
-                                <li>23:50</li>                               
+                                <li>{{ menu[index+3].chang }}</li>
+                                <li>{{ menu[index+3].time1 }}</li>
+                                <li>{{ menu[index+3].time2 }}</li>
+                                <li>{{ menu[index+3].time3 }}</li>
+                                <li>{{ menu[index+3].time4 }}</li>
+                                <li>{{ menu[index+3].time5 }}</li>
+                                <li>{{ menu[index+3].time6 }}</li>                            
+                                <li>{{ menu[index+3].time7 }}</li>
+                                <li>{{ menu[index+3].time8 }}</li>                             
                             </ul>
                         </div>
                     </div>
@@ -831,15 +844,15 @@
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:00</li>
-                                <li>12:10</li>
-                                <li>14:20</li>
-                                <li>16:30</li>
-                                <li>18:40</li>
-                                <li>20:50</li>
-                                <li>23:00</li>
-                                <li>01:10</li>
+                                <li>{{ menu[index+4].chang }}</li>
+                                <li>{{ menu[index+4].time1 }}</li>
+                                <li>{{ menu[index+4].time2 }}</li>
+                                <li>{{ menu[index+4].time3 }}</li>
+                                <li>{{ menu[index+4].time4 }}</li>
+                                <li>{{ menu[index+4].time5 }}</li>
+                                <li>{{ menu[index+4].time6 }}</li>                            
+                                <li>{{ menu[index+4].time7 }}</li>
+                                <li>{{ menu[index+4].time8 }}</li>
                             </ul>
                         </div>
                     </div>
@@ -873,11 +886,15 @@
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:00</li>
-                                <li>15:20</li>
-                                <li>20:40</li>
-                                <li>00:20</li>
+                                <li>{{ menu[index+5].chang }}</li>
+                                <li>{{ menu[index+5].time1 }}</li>
+                                <li>{{ menu[index+5].time2 }}</li>
+                                <li>{{ menu[index+5].time3 }}</li>
+                                <li>{{ menu[index+5].time4 }}</li>
+                                <li>{{ menu[index+5].time5 }}</li>
+                                <li>{{ menu[index+5].time6 }}</li>                            
+                                <li>{{ menu[index+5].time7 }}</li>
+                                <li>{{ menu[index+5].time8 }}</li>
                             </ul>
                         </div>
                     </div>
@@ -911,9 +928,15 @@
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>13:20</li>
-                                <li>18:40</li>
+                                <li>{{ menu[index+6].chang }}</li>
+                                <li>{{ menu[index+6].time1 }}</li>
+                                <li>{{ menu[index+6].time2 }}</li>
+                                <li>{{ menu[index+6].time3 }}</li>
+                                <li>{{ menu[index+6].time4 }}</li>
+                                <li>{{ menu[index+6].time5 }}</li>
+                                <li>{{ menu[index+6].time6 }}</li>                            
+                                <li>{{ menu[index+6].time7 }}</li>
+                                <li>{{ menu[index+6].time8 }}</li>
                             </ul>
                         </div>
                     </div>
@@ -947,14 +970,15 @@
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:00</li>
-                                <li>12:30</li>
-                                <li>15:00</li>
-                                <li>17:30</li>
-                                <li>20:00</li>
-                                <li>22:30</li>
-                                <li>01:00</li>
+                                <li>{{ menu[index+7].chang }}</li>
+                                <li>{{ menu[index+7].time1 }}</li>
+                                <li>{{ menu[index+7].time2 }}</li>
+                                <li>{{ menu[index+7].time3 }}</li>
+                                <li>{{ menu[index+7].time4 }}</li>
+                                <li>{{ menu[index+7].time5 }}</li>
+                                <li>{{ menu[index+7].time6 }}</li>                            
+                                <li>{{ menu[index+7].time7 }}</li>
+                                <li>{{ menu[index+7].time8 }}</li>
                             </ul>
                         </div>
                     </div>
@@ -988,12 +1012,15 @@
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-英語</li>
-                                <li>10:20</li>
-                                <li>14:00</li>
-                                <li>17:40</li>
-                                <li>21:20</li>
-                                <li>01:00</li>
+                                <li>{{ menu[index+8].chang }}</li>
+                                <li>{{ menu[index+8].time1 }}</li>
+                                <li>{{ menu[index+8].time2 }}</li>
+                                <li>{{ menu[index+8].time3 }}</li>
+                                <li>{{ menu[index+8].time4 }}</li>
+                                <li>{{ menu[index+8].time5 }}</li>
+                                <li>{{ menu[index+8].time6 }}</li>                            
+                                <li>{{ menu[index+8].time7 }}</li>
+                                <li>{{ menu[index+8].time8 }}</li>
                             </ul>
                         </div>
                     </div>
@@ -1027,11 +1054,15 @@
                         <!-- 電影時刻 -->
                         <div class="movie_time movie_time1">
                             <ul class="movie_time_list movie_time_list1">
-                                <li>2D-法語</li>
-                                <li>12:10</li>
-                                <li>15:50</li>
-                                <li>19:30</li>
-                                <li>23:10</li>
+                                <li>{{ menu[index+9].chang }}</li>
+                                <li>{{ menu[index+9].time1 }}</li>
+                                <li>{{ menu[index+9].time2 }}</li>
+                                <li>{{ menu[index+9].time3 }}</li>
+                                <li>{{ menu[index+9].time4 }}</li>
+                                <li>{{ menu[index+9].time5 }}</li>
+                                <li>{{ menu[index+9].time6 }}</li>                            
+                                <li>{{ menu[index+9].time7 }}</li>
+                                <li>{{ menu[index+9].time8 }}</li>
                             </ul>
                         </div>
                     </div>
@@ -1075,7 +1106,7 @@
                 <div class="month">
                     <P>四月</P>
                 </div>
-                <div class="swiper-container1">
+                <div class="swiper-container swbox1">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div id="int_img_a1" class="int_img"></div>
@@ -1105,7 +1136,7 @@
 
                 <!-- Initialize Swiper -->
                 <script>
-                    var swiper = new Swiper('.swiper-container1', {
+                    var swiper = new Swiper('.swbox1',{
                         slidesPerView: 2,
                         spaceBetween: 0,
                         pagination: {
@@ -1126,7 +1157,7 @@
                 <div class="month">
                     <P>五月</P>
                 </div>
-                <div class="swiper-container2">
+                <div class="swiper-container swbox2">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div id="int_img_m1" class="int_img"></div>
@@ -1181,7 +1212,7 @@
 
                 <!-- Initialize Swiper -->
                 <script>
-                    var swiper = new Swiper('.swiper-container2', {
+                    var swiper = new Swiper('.swbox2', {
                         slidesPerView: 2,
                         // spaceBetween: 0,
                         pagination: {
@@ -1201,7 +1232,7 @@
                 <div class="month">
                     <P>六月</P>
                 </div>
-                <div class="swiper-container3">
+                <div class="swiper-container swbox3">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div id="int_img_j1" class="int_img"></div>
@@ -1247,7 +1278,7 @@
 
                 <!-- Initialize Swiper -->
                 <script>
-                    var swiper = new Swiper('.swiper-container3', {
+                    var swiper = new Swiper('.swbox3', {
                         slidesPerView: 2,
                         // spaceBetween: 0,
                         pagination: {
@@ -1383,8 +1414,6 @@
         </div>
         <!---------------- -->
     </div>
-   
-
     
      <!--------------------lightbox javascript------------------------------------- -->
     <script src='js/jquery-3.4.0.min.js'></script>
@@ -1435,7 +1464,7 @@
             m_chin1.classList.remove('movie_none')
             m_chin2.classList.remove('movie_none')
             m_chin5.classList.add('movie_none')
-            chin2.classList.add('movie_none')
+            chin_2.classList.add('movie_none')
 
         }
        
@@ -1447,11 +1476,11 @@
             m_chin5.classList.add('movie_none')
             m_chin4.classList.add('movie_none')
             m_chin3.classList.add('movie_none')
-            chin2.classList.add('movie_none')
+            chin_2.classList.add('movie_none')
         }
         function chin1Hendler() {
             m_chin0.classList.add('movie_none')
-            chin2.classList.remove('movie_none')
+            chin_2.classList.remove('movie_none')
             m_chin3.classList.remove('movie_none')
             m_chin4.classList.add('movie_none')
             m_chin5.classList.add('movie_none')
@@ -1465,7 +1494,7 @@
             m_chin5.classList.add('movie_none')
             m_chin4.classList.remove('movie_none')
             m_chin3.classList.add('movie_none')
-            chin2.classList.add('movie_none')
+            chin_2.classList.add('movie_none')
             m_chin0.classList.add('movie_none')
         }
         function chin3Hendler() {
@@ -1474,7 +1503,7 @@
             m_chin5.classList.remove('movie_none')
             m_chin4.classList.add('movie_none')
             m_chin3.classList.add('movie_none')
-            chin2.classList.add('movie_none')
+            chin_2.classList.add('movie_none')
             m_chin0.classList.add('movie_none')
         }
         function chin4Hendler() {
@@ -1483,7 +1512,7 @@
             m_chin5.classList.add('movie_none')
             m_chin4.classList.add('movie_none')
             m_chin3.classList.add('movie_none')
-            chin2.classList.add('movie_none')
+            chin_2.classList.add('movie_none')
             m_chin0.classList.add('movie_none')
         }
         function chin5Hendler() {
@@ -1492,7 +1521,7 @@
             m_chin5.classList.add('movie_none')
             m_chin4.classList.add('movie_none')
             m_chin3.classList.add('movie_none')
-            chin2.classList.add('movie_none')
+            chin_2.classList.add('movie_none')
             m_chin0.classList.add('movie_none')
         }
       
@@ -1537,13 +1566,13 @@ console.log(document.documentElement.clientWidth)
      <!-- 場次專區 mobile Script-->
      <script>
         var m_chin2_dis1 = document.querySelector('#m_chin3_text1')
-        var m_chin2_dis2 = document.querySelector('#m_chin3_text2')
+        // var m_chin2_dis2 = document.querySelector('#m_chin3_text2')
         var m_movie_all1 = document.querySelector('.movie_all1')
         var m_movie_all2 = document.querySelector('.movie_all2')
         var color = document.querySelector('.movietxtcolor')
 
         m_chin2_dis1.addEventListener('click', dis1Hendler)
-        m_chin2_dis2.addEventListener('click', dis2Hendler)
+        // m_chin2_dis2.addEventListener('click', dis2Hendler)
 
         function dis1Hendler() {
         if (m_movie_all1.classList.display = 'movie_none') {
@@ -1551,7 +1580,7 @@ console.log(document.documentElement.clientWidth)
             m_movie_all1.classList.remove('movie_none')
             m_movie_all2.classList.add('movie_none')
             m_chin2_dis1.classList.add('movietxtcolor')
-            m_chin2_dis2.classList.remove('movietxtcolor')                  
+            // m_chin2_dis2.classList.remove('movietxtcolor')                  
         }
     }
     function dis2Hendler() {
@@ -1559,7 +1588,7 @@ console.log(document.documentElement.clientWidth)
             m_movie_all2.classList.remove('movie_none')
             m_movie_all1.classList.add('movie_none')
             m_chin2_dis1.classList.remove('movietxtcolor')
-            m_chin2_dis2.classList.add('movietxtcolor')
+            // m_chin2_dis2.classList.add('movietxtcolor')
         }
     }
        </script>
@@ -1632,18 +1661,18 @@ console.log(document.documentElement.clientWidth)
     <script>
                 var chin2_ch1 = document.querySelector('#chin2_text1')
                 var movie_all1 = document.querySelector('.movie_all1')
-                var chin2_ch2 = document.querySelector('#chin2_text2')
+                // var chin2_ch2 = document.querySelector('#chin2_text2')
                 var movie_all2 = document.querySelector('.movie_all2')
     
                 chin2_ch1.addEventListener('click', ch1Handler)
-                chin2_ch2.addEventListener('click', ch2Handler)
+                // chin2_ch2.addEventListener('click', ch2Handler)
     
                 function ch1Handler() {
                     if (movie_all1.classList.display = 'movie_none') {
                         movie_all1.classList.remove('movie_none')
                         movie_all2.classList.add('movie_none')
                         chin2_ch1.classList.add('movietxtcolor')
-                        chin2_ch2.classList.remove('movietxtcolor')
+                        // chin2_ch2.classList.remove('movietxtcolor')
                        
                     }
                 }
@@ -1652,12 +1681,13 @@ console.log(document.documentElement.clientWidth)
                         movie_all2.classList.remove('movie_none')
                         movie_all1.classList.add('movie_none')
                         chin2_ch1.classList.remove('movietxtcolor')
-                        chin2_ch2.classList.add('movietxtcolor')
+                        // chin2_ch2.classList.add('movietxtcolor')
                       
                     }
                 }
        </script>
 
 </body>
+
 
 </html>
