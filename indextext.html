@@ -1101,10 +1101,9 @@
                 <p>電影介紹</p>
             </ul>
             <!-- Swiper -->
-
             <div id="April" class="introduction" data-aos="flip-up" data-aos-duration="2000">
                 <div class="month">
-                    <P>四月</P>
+                    <p> menu[index].month </p>
                 </div>
                 <div class="swiper-container swbox1">
                     <div class="swiper-wrapper">
@@ -1294,8 +1293,6 @@
                 </script>
             </div>
         </div>
-   
-
         <!----------------------------關於親親----chin_5------------------------------  -->
         <div id="chin_5" class="chin_5 close">
             <div  class="chin5_box1">
@@ -1628,7 +1625,21 @@ console.log(document.documentElement.clientWidth)
           data: data
      })
       </script>
+    <!-- 電影介紹 chin_4 ------------->
+    <script>
+    let data = {
+       index: 0,
+        menu: [
+            { month:'五月', title:'', src:'' }
+        ]
+    }
     
+    let sm = new Vue ({
+         el: '#April',
+         data: data
+    })
+    
+    </script>
 
     <!-- facebook halalogo scroll javascript ----------->
     <script>
