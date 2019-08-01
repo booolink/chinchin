@@ -269,6 +269,9 @@ a{
     margin-left: 20px;
     margin-top: -5px;
 }
+.m_menu_link_none {
+    display: none;
+  }
 @keyframes bg_ani{
     0%{
         top: -4px;
